@@ -18,7 +18,9 @@ const globPromise = promisify(glob);
 class Bot extends Client {
 	public logger: Consola = consola;
 	public commands: Collection<string, Command> = new Collection();
+	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
+	public categories: Set<string> = new Set();
 	public config: Config;
 	public constructor() {
 		super({
@@ -38,6 +40,10 @@ class Bot extends Client {
 		commandFiles.map(async (value: string) => {
 			const file: Command = await import(value);
 			this.commands.set(file.name, file);
+			this.categories.add(file.category);
+			if (file.aliases?.length) {
+				file.aliases.map((value: string) => this.aliases.set(value, file.name));
+			}
 		});
 		const eventFiles: string[] = await globPromise(
 			`${__dirname}/../events/**/*{.ts,.js}`

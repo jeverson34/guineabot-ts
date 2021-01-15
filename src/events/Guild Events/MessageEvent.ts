@@ -12,15 +12,15 @@ export const run: RunFunction = async (client, message: Message) => {
 
 	const args: string[] = message.content.slice('g?'.length).trim().split(/ +/g);
 	const cmd: string = args.shift();
-	const command: Command = client.commands.get(cmd);
+	const command: Command =
+		client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
 	if (!command) return;
-	command
-		.run(client, message, args)
-		.catch((reason: any) =>
-			message.channel.send(
-				client.embed({ description: `An error occurred: ${reason}` }, message)
-			)
+	command.run(client, message, args).catch((reason: any) => {
+		message.channel.send(
+			client.embed({ description: `An error occurred: ${reason}` }, message)
 		);
+		return client.logger.error(reason);
+	});
 };
 
 export const name: string = 'message';

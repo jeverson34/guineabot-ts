@@ -40,13 +40,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@types/glob", "npm:7.1.3"],
+            ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.21"],
             ["@types/prettier", "npm:2.1.6"],
+            ["alpha-sort", "npm:4.0.0"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.1"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.7"],
             ["lint-staged", "npm:10.5.3"],
+            ["ms", "npm:2.1.3"],
             ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
@@ -343,6 +346,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/ms", [
+        ["npm:0.7.31", {
+          "packageLocation": "./.yarn/cache/@types-ms-npm-0.7.31-ea3b89342b-7ff9798a40.zip/node_modules/@types/ms/",
+          "packageDependencies": [
+            ["@types/ms", "npm:0.7.31"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/node", [
         ["npm:14.14.21", {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.21-dcd7190898-b659823ffa.zip/node_modules/@types/node/",
@@ -447,6 +459,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-json-stable-stringify", "npm:2.1.0"],
             ["json-schema-traverse", "npm:0.4.1"],
             ["uri-js", "npm:4.4.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["alpha-sort", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/alpha-sort-npm-4.0.0-97e4d19a31-771ddd6ef1.zip/node_modules/alpha-sort/",
+          "packageDependencies": [
+            ["alpha-sort", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -1602,13 +1623,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@types/glob", "npm:7.1.3"],
+            ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.21"],
             ["@types/prettier", "npm:2.1.6"],
+            ["alpha-sort", "npm:4.0.0"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.1"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.7"],
             ["lint-staged", "npm:10.5.3"],
+            ["ms", "npm:2.1.3"],
             ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
@@ -2442,6 +2466,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ms-npm-2.1.2-ec0c1512ff-9b65fb709b.zip/node_modules/ms/",
           "packageDependencies": [
             ["ms", "npm:2.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.1.3", {
+          "packageLocation": "./.yarn/cache/ms-npm-2.1.3-81ff3cfac1-6e721e648a.zip/node_modules/ms/",
+          "packageDependencies": [
+            ["ms", "npm:2.1.3"]
           ],
           "linkType": "HARD",
         }]
