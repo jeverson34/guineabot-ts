@@ -20,6 +20,7 @@ class Bot extends Client {
 	public commands: Collection<string, Command> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
+	public cooldowns: Collection<string, number> = new Collection();
 	public categories: Set<string> = new Set();
 	public config: Config;
 	public constructor() {
@@ -39,7 +40,10 @@ class Bot extends Client {
 		);
 		commandFiles.map(async (value: string) => {
 			const file: Command = await import(value);
-			this.commands.set(file.name, file);
+			this.commands.set(file.name, {
+				cooldown: 1000,
+				...file
+			});
 			this.categories.add(file.category);
 			if (file.aliases?.length) {
 				file.aliases.map((value: string) => this.aliases.set(value, file.name));

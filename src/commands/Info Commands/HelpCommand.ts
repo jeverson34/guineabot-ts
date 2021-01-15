@@ -42,7 +42,7 @@ export const run: RunFunction = async (client, message, args) => {
 					.sort((a: [string, any], b: [string, any]) => alphaSort()(a[0], b[0]))
 					.map((value: [string, any]) =>
 						typeof value[1] == 'number'
-							? ms(value[1], { long: true })
+							? `${value[0][0].toUpperCase() + value[0].slice(1)}: \`${ms(value[1], { long: true })}\``
 							: value[1]?.map
 							? value[1]
 									.map(
