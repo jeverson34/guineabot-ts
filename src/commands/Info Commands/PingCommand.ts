@@ -5,6 +5,7 @@ export const run: RunFunction = async (client, message) => {
 	const msg: Message = await message.channel.send(
 		client.embed({ description: '📶 Pinging...' }, message)
 	);
+
 	await msg.edit(
 		client.embed(
 			{
