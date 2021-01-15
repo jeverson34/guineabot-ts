@@ -1,7 +1,7 @@
 import { RunFunction } from '../../interfaces/Event';
 import { Message } from 'discord.js';
 import { Command } from '../../interfaces/Command';
-import ms from "ms";
+import ms from 'ms';
 
 export const run: RunFunction = async (client, message: Message) => {
 	if (
@@ -16,17 +16,32 @@ export const run: RunFunction = async (client, message: Message) => {
 	const command: Command =
 		client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
 	if (!command) return;
-	if (client.cooldowns.has(`${message.author.id}-${command.name}`)) return await message.channel.send(client.embed({ description: `You must wait ${ms(client.cooldowns.get(`${message.author.id}-${command.name}`) - Date.now(), { long: true})} before using this command again!` }, message));
+	if (client.cooldowns.has(`${message.author.id}-${command.name}`))
+		return await message.channel.send(
+			client.embed(
+				{
+					description: `You must wait ${ms(
+						client.cooldowns.get(`${message.author.id}-${command.name}`) -
+							Date.now(),
+						{ long: true }
+					)} before using this command again!`,
+				},
+				message
+			)
+		);
 	command.run(client, message, args).catch((reason: any) => {
 		message.channel.send(
 			client.embed({ description: `An error occurred: ${reason}` }, message)
 		);
 		return client.logger.error(reason);
 	});
-	client.cooldowns.set(`${message.author.id}-${command.name}`, Date.now() + command.cooldown)
+	client.cooldowns.set(
+		`${message.author.id}-${command.name}`,
+		Date.now() + command.cooldown
+	);
 	setTimeout(() => {
-		client.cooldowns.delete(`${message.author.id}-${command.name}`)
-	}, command.cooldown)
+		client.cooldowns.delete(`${message.author.id}-${command.name}`);
+	}, command.cooldown);
 };
 
 export const name: string = 'message';

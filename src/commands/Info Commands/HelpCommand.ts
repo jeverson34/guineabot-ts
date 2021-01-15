@@ -23,7 +23,11 @@ export const run: RunFunction = async (client, message, args) => {
 		}
 	);
 	const commandEmbed: MessageEmbed = client.embed(
-		{ fields, description: `${client.commands.size} commands` },
+		{
+			fields,
+			description: `Found a total of ${client.commands.size} commands\nFor information on a specific command, do \`g?help <command name or alias>\``,
+			title: 'Guineabot Help Menu',
+		},
 		message
 	);
 
@@ -37,12 +41,14 @@ export const run: RunFunction = async (client, message, args) => {
 	return await message.channel.send(
 		client.embed(
 			{
-                description: Object.entries(cmd)
-                    .filter((value: [string, any]) => value[0] != "run")
+				description: Object.entries(cmd)
+					.filter((value: [string, any]) => value[0] != 'run')
 					.sort((a: [string, any], b: [string, any]) => alphaSort()(a[0], b[0]))
 					.map((value: [string, any]) =>
 						typeof value[1] == 'number'
-							? `${value[0][0].toUpperCase() + value[0].slice(1)}: \`${ms(value[1], { long: true })}\``
+							? `${
+									value[0][0].toUpperCase() + value[0].slice(1)
+							  }: \`${ms(value[1], { long: true })}\``
 							: value[1]?.map
 							? value[1]
 									.map(
@@ -52,9 +58,12 @@ export const run: RunFunction = async (client, message, args) => {
 											}: \`${value2}\``
 									)
 									.join(', ')
-							: `${value[0][0].toUpperCase() + value[0].slice(1)}: \`${value[1]}\``
+							: `${value[0][0].toUpperCase() + value[0].slice(1)}: \`${
+									value[1]
+							  }\``
 					)
 					.join('\n'),
+				title: 'Guineabot Help Menu',
 			},
 			message
 		)
@@ -62,4 +71,4 @@ export const run: RunFunction = async (client, message, args) => {
 };
 
 export const name: string = 'help';
-export const category: string = "Information";
+export const category: string = 'Information';

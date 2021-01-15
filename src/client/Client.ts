@@ -42,7 +42,7 @@ class Bot extends Client {
 			const file: Command = await import(value);
 			this.commands.set(file.name, {
 				cooldown: 1000,
-				...file
+				...file,
 			});
 			this.categories.add(file.category);
 			if (file.aliases?.length) {
@@ -59,13 +59,15 @@ class Bot extends Client {
 		});
 	}
 	public embed(options: MessageEmbedOptions, message: Message): MessageEmbed {
-		return new MessageEmbed({ ...options, color: 'RANDOM' }).setFooter(
-			`${message.author.tag} | ${this.user.username}`,
-			message.author.displayAvatarURL({
-				dynamic: true,
-				format: 'png',
-			})
-		);
+		return new MessageEmbed({ ...options, color: 'RANDOM' })
+			.setFooter(
+				`${message.author.tag} | ${this.user.username}`,
+				message.author.displayAvatarURL({
+					dynamic: true,
+					format: 'png',
+				})
+			)
+			.setTimestamp();
 	}
 }
 

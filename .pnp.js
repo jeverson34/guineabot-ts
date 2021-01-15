@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:12.5.1"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.7"],
+            ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
             ["ms", "npm:2.1.3"],
             ["prettier", "npm:2.2.1"],
@@ -1631,6 +1632,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:12.5.1"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.7"],
+            ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
             ["ms", "npm:2.1.3"],
             ["prettier", "npm:2.2.1"],
@@ -1758,6 +1760,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["please-upgrade-node", "npm:3.2.0"],
             ["slash", "npm:3.0.0"],
             ["which-pm-runs", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["imageapi.js", [
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.3.2-20ab41ac3a-f46c213676.zip/node_modules/imageapi.js/",
+          "packageDependencies": [
+            ["imageapi.js", "npm:1.3.2"],
+            ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
         }]
