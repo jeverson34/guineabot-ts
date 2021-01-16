@@ -4,14 +4,25 @@ import { Command } from '../../interfaces/Command';
 import ms from 'ms';
 
 export const run: RunFunction = async (client, message: Message) => {
+	const guildConfigSchema = await client.db.load('guildConfig');
+	const guildConfig = await guildConfigSchema.findOne({
+		guild: message.guild.id,
+	});
+	let prefix: string = 'g?';
+	if ((guildConfig as any)?.prefix) {
+		prefix = (guildConfig as any).prefix;
+	}
 	if (
 		message.author.bot ||
 		!message.guild ||
-		!message.content.toLowerCase().startsWith('g?')
+		!message.content.toLowerCase().startsWith(prefix)
 	)
 		return;
 
-	const args: string[] = message.content.slice('g?'.length).trim().split(/ +/g);
+	const args: string[] = message.content
+		.slice(prefix.length)
+		.trim()
+		.split(/ +/g);
 	const cmd: string = args.shift();
 	const command: Command =
 		client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));

@@ -12,6 +12,7 @@ import { promisify } from 'util';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Config } from '../interfaces/Config';
+import { Database } from 'zapmongo';
 
 const globPromise = promisify(glob);
 
@@ -21,6 +22,7 @@ class Bot extends Client {
 	public aliases: Collection<string, string> = new Collection();
 	public events: Collection<string, Event> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();
+	public db: Database;
 	public categories: Set<string> = new Set();
 	public config: Config;
 	public constructor() {
@@ -56,6 +58,18 @@ class Bot extends Client {
 			const file: Event = await import(value);
 			this.events.set(file.name, file);
 			this.on(file.name, file.run.bind(null, this));
+		});
+		this.db = new Database({
+			mongoURI: this.config.mongodb_uri,
+			schemas: [
+				{
+					name: 'userCooldowns',
+					data: {
+						userId: String,
+						cooldowns: [Object],
+					},
+				},
+			],
 		});
 	}
 	public embed(options: MessageEmbedOptions, message: Message): MessageEmbed {
