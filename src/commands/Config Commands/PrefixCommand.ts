@@ -1,20 +1,16 @@
 import { RunFunction } from '../../interfaces/Command';
+import db from "quick.db";
 
 export const name: string = 'prefix';
 export const category: string = 'Server Configuration';
 
 export const run: RunFunction = async (client, message, args) => {
-	const guildConfigSchema = await client.db.load('guildConfig');
-	const guildConfig = await guildConfigSchema.findOne({
-		guild: message.guild.id,
-	});
-
 	if (!args.length)
 		return await message.channel.send(
 			client.embed(
 				{
 					description: `**Current Prefix:** ${
-						(guildConfig as any)?.prefix || 'g?'
+						db.get(`${message.guild.id}-prefix`) || 'g?'
 					}`,
 				},
 				message
@@ -44,10 +40,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 
-	await guildConfigSchema.update(
-		{ guild: message.guild.id },
-		{ prefix: args[0].toLowerCase() }
-	);
+	await db.set(`${message.guild.id}-prefix`, args[0].toLowerCase())
 	return await message.channel.send(
 		client.embed(
 			{

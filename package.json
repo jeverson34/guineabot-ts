@@ -13,7 +13,7 @@
 		"url": "git+https://github.com/Cy1der/guineabot-ts.git"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Cy1der",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/Cy1der/guineabot-ts/issues"
@@ -79,6 +79,6 @@
 		"glob": "^7.1.6",
 		"got": "^11.8.1",
 		"ms": "^2.1.3",
-		"zapmongo": "^2.0.3"
+		"quick.db": "^7.1.3"
 	}
 }

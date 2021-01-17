@@ -1,17 +1,11 @@
 import { RunFunction } from '../../interfaces/Event';
 import { Message } from 'discord.js';
 import { Command } from '../../interfaces/Command';
+import db from "quick.db";
 import ms from 'ms';
 
 export const run: RunFunction = async (client, message: Message) => {
-	const guildConfigSchema = await client.db.load('guildConfig');
-	const guildConfig = await guildConfigSchema.findOne({
-		guild: message.guild.id,
-	});
-	let prefix: string = 'g?';
-	if ((guildConfig as any)?.prefix) {
-		prefix = (guildConfig as any).prefix;
-	}
+	let prefix: string = db.get(`${message.guild.id}-prefix`) || 'g?';
 	if (
 		message.author.bot ||
 		!message.guild ||
