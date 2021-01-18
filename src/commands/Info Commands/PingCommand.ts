@@ -28,3 +28,4 @@ export const run: RunFunction = async (client, message) => {
 export const name: string = 'ping';
 export const aliases: string[] = ['pong'];
 export const category: string = 'Information';
+export const description: string = 'Fetch Discord Latency';

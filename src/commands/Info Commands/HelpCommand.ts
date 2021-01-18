@@ -3,16 +3,16 @@ import alphaSort from 'alpha-sort';
 import { RunFunction, Command } from '../../interfaces/Command';
 import { MessageEmbed, EmbedFieldData } from 'discord.js';
 
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, message, args, prefix) => {
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(value: string) => {
 			return {
-				name: `${value[0].toUpperCase() + value.slice(1).toLowerCase()} [${
+				name: `${value[0].toUpperCase() + value.slice(1).toLowerCase()}《${
 					client.commands.filter(
 						(command: Command) =>
 							command.category.toLowerCase() == value.toLowerCase()
 					).size
-				}]`,
+				}》`,
 				value: client.commands
 					.filter(
 						(cmd: Command) => cmd.category.toLowerCase() == value.toLowerCase()
@@ -25,7 +25,7 @@ export const run: RunFunction = async (client, message, args) => {
 	const commandEmbed: MessageEmbed = client.embed(
 		{
 			fields,
-			description: `Found a total of ${client.commands.size} commands\nFor information on a specific command, do \`g?help <command name or alias>\``,
+			description: `Found a total of ${client.commands.size} commands\nFor information on a specific command, do \`${prefix}help <command name or alias>\``,
 			title: 'Guineabot Help Menu',
 		},
 		message
@@ -72,3 +72,4 @@ export const run: RunFunction = async (client, message, args) => {
 
 export const name: string = 'help';
 export const category: string = 'Information';
+export const description: string = 'Gives you information about the commands';

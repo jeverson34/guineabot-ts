@@ -1,7 +1,7 @@
 import { RunFunction } from '../../interfaces/Event';
 import { Message } from 'discord.js';
 import { Command } from '../../interfaces/Command';
-import db from "quick.db";
+import db from 'quick.db';
 import ms from 'ms';
 
 export const run: RunFunction = async (client, message: Message) => {
@@ -34,7 +34,7 @@ export const run: RunFunction = async (client, message: Message) => {
 				message
 			)
 		);
-	command.run(client, message, args).catch((reason: any) => {
+	command.run(client, message, args, prefix).catch((reason: any) => {
 		message.channel.send(
 			client.embed({ description: `An error occurred: ${reason}` }, message)
 		);

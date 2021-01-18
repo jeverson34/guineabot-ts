@@ -1,7 +1,7 @@
 import { RunFunction } from '../../interfaces/Command';
 import got from 'got';
 
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, message) => {
 	got('https://www.reddit.com/r/wholesomememes/random/.json').then(
 		(response) => {
 			//Fetch most of the data from the reddit post it recieves
@@ -29,3 +29,5 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'wholesomememe';
 export const category: string = 'Fun';
 export const aliases: string[] = ['wm'];
+export const description: string =
+	'Get a random image from the wholesomememes subreddit';

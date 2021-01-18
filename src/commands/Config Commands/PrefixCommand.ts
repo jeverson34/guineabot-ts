@@ -1,17 +1,17 @@
 import { RunFunction } from '../../interfaces/Command';
-import db from "quick.db";
+import db from 'quick.db';
 
 export const name: string = 'prefix';
 export const category: string = 'Server Configuration';
+export const description: string =
+	'Change/view the prefix for using Guineabot.';
 
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, message, args, prefix) => {
 	if (!args.length)
 		return await message.channel.send(
 			client.embed(
 				{
-					description: `**Current Prefix:** ${
-						db.get(`${message.guild.id}-prefix`) || 'g?'
-					}`,
+					description: `**Current Prefix:** ${prefix}`,
 				},
 				message
 			)
@@ -40,7 +40,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 
-	await db.set(`${message.guild.id}-prefix`, args[0].toLowerCase())
+	await db.set(`${message.guild.id}-prefix`, args[0].toLowerCase());
 	return await message.channel.send(
 		client.embed(
 			{
