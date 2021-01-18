@@ -1,3 +1,3 @@
 declare interface String {
-    replaceAt(index: number, replacement: string): string
+	replaceAt(index: number, replacement: string): string;
 }

@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 import mazegeneration from 'maze-generation';
-import "../../declarations/replaceAt";
+import '../../declarations/replaceAt';
 
 export const run: RunFunction = async (client, message, args, prefix) => {
 	if (!args.length)
@@ -54,8 +54,12 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 
 export const name: string = 'maze';
 export const category: string = 'Games';
-export const description: string = "Generate a maze to solve";
+export const description: string = 'Generate a maze to solve';
 
 String.prototype.replaceAt = function (index, replacement) {
-    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-}
+	return (
+		this.substr(0, index) +
+		replacement +
+		this.substr(index + replacement.length)
+	);
+};

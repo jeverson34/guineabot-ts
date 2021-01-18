@@ -47,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["canvas", "npm:2.6.1"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.1"],
+            ["discord.js-minesweeper", "npm:1.0.6"],
             ["glob", "npm:7.1.6"],
             ["got", "npm:11.8.1"],
             ["husky", "npm:4.3.8"],
@@ -1436,6 +1437,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["discord.js-minesweeper", [
+        ["npm:1.0.6", {
+          "packageLocation": "./.yarn/cache/discord.js-minesweeper-npm-1.0.6-a6247da3d3-94253c07da.zip/node_modules/discord.js-minesweeper/",
+          "packageDependencies": [
+            ["discord.js-minesweeper", "npm:1.0.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["dot-prop", [
         ["npm:5.3.0", {
           "packageLocation": "./.yarn/cache/dot-prop-npm-5.3.0-7bf6ee1eb8-76e6693d88.zip/node_modules/dot-prop/",
@@ -1933,6 +1943,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["canvas", "npm:2.6.1"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.1"],
+            ["discord.js-minesweeper", "npm:1.0.6"],
             ["glob", "npm:7.1.6"],
             ["got", "npm:11.8.1"],
             ["husky", "npm:4.3.8"],

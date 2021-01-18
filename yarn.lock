@@ -1177,6 +1177,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"discord.js-minesweeper@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "discord.js-minesweeper@npm:1.0.6"
+  checksum: 94253c07da2e2d02407567168bb3d6cc70d9102d8e5fc0f6bf831d9cfc56cd6c9b45f11fb4ba462b92a70b25187b3fe86e4c475cf07931e683c9b9e5bfebc085
+  languageName: node
+  linkType: hard
+
 "discord.js@npm:^12.5.1":
   version: 12.5.1
   resolution: "discord.js@npm:12.5.1"
@@ -1642,6 +1649,7 @@ fsevents@~2.3.1:
     canvas: ^2.6.1
     consola: ^2.15.0
     discord.js: ^12.5.1
+    discord.js-minesweeper: ^1.0.6
     glob: ^7.1.6
     got: ^11.8.1
     husky: ^4.3.8
