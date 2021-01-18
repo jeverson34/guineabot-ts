@@ -56,6 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],
             ["prettier", "npm:2.2.1"],
             ["quick.db", "npm:7.1.3"],
+            ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"]
@@ -1952,6 +1953,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],
             ["prettier", "npm:2.2.1"],
             ["quick.db", "npm:7.1.3"],
+            ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"]
@@ -4308,6 +4310,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/strip-json-comments-npm-2.0.1-e7883b2d04-e60d99aa28.zip/node_modules/strip-json-comments/",
           "packageDependencies": [
             ["strip-json-comments", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sudoku", [
+        ["npm:0.0.3", {
+          "packageLocation": "./.yarn/cache/sudoku-npm-0.0.3-cb03024a03-4db1b56d63.zip/node_modules/sudoku/",
+          "packageDependencies": [
+            ["sudoku", "npm:0.0.3"]
           ],
           "linkType": "HARD",
         }]

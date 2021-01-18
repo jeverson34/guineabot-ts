@@ -1658,6 +1658,7 @@ fsevents@~2.3.1:
     ms: ^2.1.3
     prettier: ^2.2.1
     quick.db: ^7.1.3
+    sudoku: ^0.0.3
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.1
     typescript: ^4.1.3
@@ -3782,6 +3783,13 @@ fsevents@~2.3.1:
   version: 2.0.1
   resolution: "strip-json-comments@npm:2.0.1"
   checksum: e60d99aa2849c27a04dce0620334f45822197df6b83664dd3746971e9a0a766d989dbb8d87f9cb7350725d2b5df401a2343222ad06e36a1ba7d62c6633267fcb
+  languageName: node
+  linkType: hard
+
+"sudoku@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "sudoku@npm:0.0.3"
+  checksum: 4db1b56d63a6779b6ca56181cf4c655bb637c58aa01ff0940c135dcf98c306e68e0aef0fb7b014a319d1a056d2fec1d9407be89b3b25dfc70e19eeeab483e547
   languageName: node
   linkType: hard
 

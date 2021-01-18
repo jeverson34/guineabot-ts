@@ -30,6 +30,7 @@ class Bot extends Client {
 			messageCacheMaxSize: 200,
 			messageEditHistoryMaxSize: 200,
 			messageSweepInterval: 180,
+			partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 		});
 	}
 	public async start(config: Config): Promise<void> {

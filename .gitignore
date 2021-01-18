@@ -7,3 +7,4 @@ dist
 !.yarn/versions
 config.json
 json.sqlite
+gbot-ts.code-workspace
