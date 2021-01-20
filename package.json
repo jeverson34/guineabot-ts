@@ -78,6 +78,7 @@
 		"canvas": "^2.6.1",
 		"consola": "^2.15.0",
 		"discord-player": "^3.2.1",
+		"discord-tictactoe": "^2.0.7",
 		"discord.js": "^12.5.1",
 		"discord.js-minesweeper": "^1.0.6",
 		"glob": "^7.1.6",
