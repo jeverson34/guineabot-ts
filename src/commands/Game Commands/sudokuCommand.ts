@@ -29,7 +29,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 
 	let grayPositions = [];
 
-    const image = './src/assets/sudoku/sudokuBoard.png';
+	const image = './src/assets/sudoku/sudokuBoard.png';
 
 	const canvas = Canvas.createCanvas(555, 555);
 	const ctx = canvas.getContext('2d');
@@ -58,7 +58,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	const attachment = new Discord.MessageAttachment(
 		canvas.toBuffer(),
 		'sudokuBoard.jpg'
-    );
+	);
 
 	message.channel.send(attachment);
 };
