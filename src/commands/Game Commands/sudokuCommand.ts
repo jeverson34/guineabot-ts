@@ -2,8 +2,16 @@ import { RunFunction } from '../../interfaces/Command';
 import Canvas from 'canvas';
 import sudoku from 'sudoku';
 import Discord from 'discord.js';
+import checkIfDisabled from '../../functions/checkIfDisabled';
 
 export const run: RunFunction = async (client, message, args, prefix) => {
+	if (checkIfDisabled(message, 'games') === true)
+		return await message.channel.send(
+			client.embed(
+				{ description: `Games are disabled in this server.` },
+				message
+			)
+		);
 	let puzzle: any[] = sudoku.makepuzzle();
 	for (let i = 0; i < puzzle.length; i++) {
 		var index = puzzle.indexOf(null);

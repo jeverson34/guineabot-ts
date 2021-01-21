@@ -20,14 +20,31 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 					message
 				)
 			);
-    }
-    
-    const volume = parseInt(args[0]);
+	}
 
-    if (isNaN(volume)) return await message.channel.send(client.embed({ description: "The volume has to be a numerical value" }, message));
-    if (volume > 100 || volume < 0) return await message.channel.send(client.embed({ description: `The volume must be 100 or lower and 0 or higher.`}, message))
-    await client.music.setVolume(message, volume)
-    return await message.channel.send(client.embed({ description: `Successfully set the volume to **${volume}**` }, message))
+	const volume = parseInt(args[0]);
+
+	if (isNaN(volume))
+		return await message.channel.send(
+			client.embed(
+				{ description: 'The volume has to be a numerical value' },
+				message
+			)
+		);
+	if (volume > 100 || volume < 0)
+		return await message.channel.send(
+			client.embed(
+				{ description: `The volume must be 100 or lower and 0 or higher.` },
+				message
+			)
+		);
+	await client.music.setVolume(message, volume);
+	return await message.channel.send(
+		client.embed(
+			{ description: `Successfully set the volume to **${volume}**` },
+			message
+		)
+	);
 };
 
 export const name: string = 'volume';

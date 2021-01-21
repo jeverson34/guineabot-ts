@@ -13,7 +13,6 @@ import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Config } from '../interfaces/Config';
 import { Player } from 'discord-player';
-import { url } from 'inspector';
 
 const globPromise = promisify(glob);
 
