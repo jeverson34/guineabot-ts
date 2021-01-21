@@ -53,6 +53,13 @@ export const run: RunFunction = async (client, message: Message) => {
 	}
 
 	let prefix: string = (await db.get(`${message.guild.id}-prefix`)) || 'g?';
+	if (
+		message.content.toLowerCase().startsWith(`<@!${client.user.id}>`) ||
+		message.content.toLowerCase().startsWith(`<@${client.user.id}>`)
+	)
+		return message.channel.send(
+			client.embed({ description: `My prefix is \`${prefix}\`` }, message)
+		);
 	if (!message.content.toLowerCase().startsWith(prefix)) return;
 
 	const args: string[] = message.content
