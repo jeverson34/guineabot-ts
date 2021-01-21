@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 import got from 'got';
-import checkIfDisabled from "../../functions/checkIfDisabled";
+import checkIfDisabled from '../../functions/checkIfDisabled';
 
 export const run: RunFunction = async (client, message) => {
 	if (checkIfDisabled(message, 'fun') === true)

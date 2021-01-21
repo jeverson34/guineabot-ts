@@ -40,13 +40,23 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 			)
 		);
 
-	await db.set(`${message.guild.id}-prefix`, args[0].toLowerCase());
-	return await message.channel.send(
-		client.embed(
-			{
-				description: `Done! The prefix is now set to ${args[0].toLowerCase()}`,
-			},
-			message
-		)
-	);
+	if (args[0].toLowerCase() === 'g?') {
+		await db.delete(`${message.guild.id}-prefix`);
+		return message.channel.send(
+			client.embed(
+				{ description: 'Done! The prefix is now reset to default (g?).' },
+				message
+			)
+		);
+	} else {
+		await db.set(`${message.guild.id}-prefix`, args[0].toLowerCase());
+		return await message.channel.send(
+			client.embed(
+				{
+					description: `Done! The prefix is now set to ${args[0].toLowerCase()}`,
+				},
+				message
+			)
+		);
+	}
 };

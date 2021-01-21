@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discordjs/opus", "npm:0.3.3"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.21"],
+            ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
             ["alpha-sort", "npm:4.0.0"],
             ["canvas", "npm:2.6.1"],
@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["opusscript", "npm:0.0.7"],
             ["prettier", "npm:2.2.1"],
             ["quick.db", "npm:7.1.3"],
+            ["string-progressbar", "npm:1.0.1"],
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
@@ -453,6 +454,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.21-dcd7190898-b659823ffa.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.14.21"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:14.14.22", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.22-fe4ed4ddc2-e46e32685b.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:14.14.22"]
           ],
           "linkType": "HARD",
         }]
@@ -2171,7 +2179,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discordjs/opus", "npm:0.3.3"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.21"],
+            ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
             ["alpha-sort", "npm:4.0.0"],
             ["canvas", "npm:2.6.1"],
@@ -2190,6 +2198,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["opusscript", "npm:0.0.7"],
             ["prettier", "npm:2.2.1"],
             ["quick.db", "npm:7.1.3"],
+            ["string-progressbar", "npm:1.0.1"],
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
@@ -4702,6 +4711,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/string-argv-npm-0.3.1-b4f6cd3d7b-002a690269.zip/node_modules/string-argv/",
           "packageDependencies": [
             ["string-argv", "npm:0.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["string-progressbar", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/string-progressbar-npm-1.0.1-acbbfed6a9-053956433c.zip/node_modules/string-progressbar/",
+          "packageDependencies": [
+            ["string-progressbar", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
