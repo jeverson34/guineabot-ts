@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["opusscript", "npm:0.0.7"],
             ["prettier", "npm:2.2.1"],
             ["quick.db", "npm:7.1.3"],
+            ["sourcebin_js", "npm:0.0.3-ignore"],
             ["string-progressbar", "npm:1.0.1"],
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
@@ -365,6 +366,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@sindresorhus-is-npm-4.0.0-5aa71e5397-7022d5037f.zip/node_modules/@sindresorhus/is/",
           "packageDependencies": [
             ["@sindresorhus/is", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@sourcebin/linguist", [
+        ["npm:0.0.3", {
+          "packageLocation": "./.yarn/cache/@sourcebin-linguist-npm-0.0.3-0ab5bd9639-39e4772232.zip/node_modules/@sourcebin/linguist/",
+          "packageDependencies": [
+            ["@sourcebin/linguist", "npm:0.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -2198,6 +2208,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["opusscript", "npm:0.0.7"],
             ["prettier", "npm:2.2.1"],
             ["quick.db", "npm:7.1.3"],
+            ["sourcebin_js", "npm:0.0.3-ignore"],
             ["string-progressbar", "npm:1.0.1"],
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
@@ -4596,6 +4607,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["source-map-support", "npm:0.5.19"],
             ["buffer-from", "npm:1.1.1"],
             ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sourcebin_js", [
+        ["npm:0.0.3-ignore", {
+          "packageLocation": "./.yarn/cache/sourcebin_js-npm-0.0.3-ignore-5bdda7e380-5468d93218.zip/node_modules/sourcebin_js/",
+          "packageDependencies": [
+            ["sourcebin_js", "npm:0.0.3-ignore"],
+            ["@sourcebin/linguist", "npm:0.0.3"],
+            ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
         }]

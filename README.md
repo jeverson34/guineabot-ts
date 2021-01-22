@@ -11,6 +11,7 @@
   - [Information](#information)
   - [Leveling](#leveling)
   - [Music](#music)
+  - [Admin](#admin)
 - [Installation](#installation)
   - [Prerequisites](#prerequisites)
   - [Initialization](#initialization)
@@ -83,7 +84,11 @@ An all-purpose bot aimed to serve your Discord server with honor. All the comman
 - skip
 - stop
 - volume
-  
+
+### Admin
+
+- db
+
 ## Installation
 
 ### Prerequisites
