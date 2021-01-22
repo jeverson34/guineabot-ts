@@ -79,7 +79,15 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		return await message.channel.send(
 			client.embed({ title: 'Complete Database', url: URL }, message)
 		);
-	} else return await message.channel.send(client.embed({ description: "Invalid option. Must be `all`, `set`, `delete`, `get`." }, message))
+	} else
+		return await message.channel.send(
+			client.embed(
+				{
+					description: 'Invalid option. Must be `all`, `set`, `delete`, `get`.',
+				},
+				message
+			)
+		);
 };
 
 export const name: string = 'database';

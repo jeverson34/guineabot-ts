@@ -1,9 +1,16 @@
 import { RunFunction } from '../../interfaces/Command';
 import db from 'quick.db';
 import createBar from 'string-progressbar';
-import { userInfo } from 'os';
+import checkIfDisabled from '../../functions/checkIfDisabled';
 
 export const run: RunFunction = async (client, message, args, prefix) => {
+	if (checkIfDisabled(message, 'leveling') === true)
+		return await message.channel.send(
+			client.embed(
+				{ description: 'Leveling commands are disabled in this server.' },
+				message
+			)
+		);
 	const target = message.mentions.users.first() || message.author;
 	var userInfo = await db.get(`${target.id}-${message.guild.id}-level`);
 	if (!userInfo) {

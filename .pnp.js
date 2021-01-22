@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@canvacord/assets", "npm:1.0.2"],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@discordjs/opus", "npm:0.3.3"],
@@ -45,6 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
             ["alpha-sort", "npm:4.0.0"],
+            ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
             ["consola", "npm:2.15.0"],
             ["discord-player", "npm:3.2.1"],
@@ -66,6 +68,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
+            ["twemoji-parser", "npm:13.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["ytdl-core", "npm:4.4.4"]
           ],
@@ -109,6 +112,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@babel/runtime", "npm:7.12.5"],
             ["regenerator-runtime", "npm:0.13.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@canvacord/assets", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/@canvacord-assets-npm-1.0.2-98802a38ca-7f5ba8c020.zip/node_modules/@canvacord/assets/",
+          "packageDependencies": [
+            ["@canvacord/assets", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -980,6 +992,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["camelcase", "npm:5.3.1"],
             ["map-obj", "npm:4.1.0"],
             ["quick-lru", "npm:4.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["canvacord", [
+        ["npm:5.0.8", {
+          "packageLocation": "./.yarn/cache/canvacord-npm-5.0.8-36d9aafa9b-f35fec4ef4.zip/node_modules/canvacord/",
+          "packageDependencies": [
+            ["canvacord", "npm:5.0.8"],
+            ["@canvacord/assets", "npm:1.0.2"],
+            ["canvas", "npm:2.6.1"],
+            ["gifencoder", "npm:2.0.1"],
+            ["moment", "npm:2.29.1"],
+            ["moment-duration-format", "npm:2.3.2"],
+            ["node-canvas-with-twemoji-and-discord-emoji", "npm:1.1.8"]
           ],
           "linkType": "HARD",
         }]
@@ -1963,6 +1990,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fs-extra", [
+        ["npm:8.1.0", {
+          "packageLocation": "./.yarn/cache/fs-extra-npm-8.1.0-197473387f-056a96d4f5.zip/node_modules/fs-extra/",
+          "packageDependencies": [
+            ["fs-extra", "npm:8.1.0"],
+            ["graceful-fs", "npm:4.2.4"],
+            ["jsonfile", "npm:4.0.0"],
+            ["universalify", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:9.0.1", {
           "packageLocation": "./.yarn/cache/fs-extra-npm-9.0.1-2925889105-b7374cb058.zip/node_modules/fs-extra/",
           "packageDependencies": [
@@ -2092,6 +2129,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["gifencoder", [
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/gifencoder-npm-2.0.1-b45d33a696-b5f8b04e05.zip/node_modules/gifencoder/",
+          "packageDependencies": [
+            ["gifencoder", "npm:2.0.1"],
+            ["canvas", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["git-raw-commits", [
         ["npm:2.0.9", {
           "packageLocation": "./.yarn/cache/git-raw-commits-npm-2.0.9-b8359db32c-8824db4732.zip/node_modules/git-raw-commits/",
@@ -2184,6 +2231,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["guineabot-ts", "workspace:."],
+            ["@canvacord/assets", "npm:1.0.2"],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@discordjs/opus", "npm:0.3.3"],
@@ -2192,6 +2240,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
             ["alpha-sort", "npm:4.0.0"],
+            ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
             ["consola", "npm:2.15.0"],
             ["discord-player", "npm:3.2.1"],
@@ -2213,6 +2262,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
             ["ts-node-dev", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:1.1.1"],
+            ["twemoji-parser", "npm:13.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["ytdl-core", "npm:4.4.4"]
           ],
@@ -2742,6 +2792,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["jsonfile", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/jsonfile-npm-4.0.0-10ce3aea15-a40b7b64da.zip/node_modules/jsonfile/",
+          "packageDependencies": [
+            ["jsonfile", "npm:4.0.0"],
+            ["graceful-fs", "npm:4.2.4"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/jsonfile-npm-5.0.0-be63f5e054-938b5d1216.zip/node_modules/jsonfile/",
+          "packageDependencies": [
+            ["jsonfile", "npm:5.0.0"],
+            ["graceful-fs", "npm:4.2.4"],
+            ["universalify", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:6.1.0", {
           "packageLocation": "./.yarn/cache/jsonfile-npm-6.1.0-20a4796cee-9419c886ab.zip/node_modules/jsonfile/",
           "packageDependencies": [
@@ -3322,6 +3389,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["moment-duration-format", [
+        ["npm:2.3.2", {
+          "packageLocation": "./.yarn/cache/moment-duration-format-npm-2.3.2-5e6bd515a4-e4d548c14c.zip/node_modules/moment-duration-format/",
+          "packageDependencies": [
+            ["moment-duration-format", "npm:2.3.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["ms", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/ms-npm-2.0.0-9e1101a471-1a230340cc.zip/node_modules/ms/",
@@ -3401,6 +3477,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["node-addon-api", "npm:3.1.0"],
             ["node-gyp", "npm:7.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["node-canvas-with-twemoji-and-discord-emoji", [
+        ["npm:1.1.8", {
+          "packageLocation": "./.yarn/cache/node-canvas-with-twemoji-and-discord-emoji-npm-1.1.8-36510488e9-fa0db4a476.zip/node_modules/node-canvas-with-twemoji-and-discord-emoji/",
+          "packageDependencies": [
+            ["node-canvas-with-twemoji-and-discord-emoji", "npm:1.1.8"],
+            ["canvas", "npm:2.6.1"],
+            ["twemoji", "npm:13.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5174,6 +5261,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["twemoji", [
+        ["npm:13.0.1", {
+          "packageLocation": "./.yarn/cache/twemoji-npm-13.0.1-f5246bd678-a4f47f2ec3.zip/node_modules/twemoji/",
+          "packageDependencies": [
+            ["twemoji", "npm:13.0.1"],
+            ["fs-extra", "npm:8.1.0"],
+            ["jsonfile", "npm:5.0.0"],
+            ["twemoji-parser", "npm:13.0.0"],
+            ["universalify", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["twemoji-parser", [
+        ["npm:13.0.0", {
+          "packageLocation": "./.yarn/cache/twemoji-parser-npm-13.0.0-36ae829ae7-05a4d6a857.zip/node_modules/twemoji-parser/",
+          "packageDependencies": [
+            ["twemoji-parser", "npm:13.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["type-fest", [
         ["npm:0.11.0", {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.11.0-81410fe889-02e5cadf13.zip/node_modules/type-fest/",
@@ -5214,6 +5323,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["universalify", [
+        ["npm:0.1.2", {
+          "packageLocation": "./.yarn/cache/universalify-npm-0.1.2-9b22d31d2d-420fc65473.zip/node_modules/universalify/",
+          "packageDependencies": [
+            ["universalify", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/universalify-npm-1.0.0-eff81409f3-d74303a8d9.zip/node_modules/universalify/",
           "packageDependencies": [

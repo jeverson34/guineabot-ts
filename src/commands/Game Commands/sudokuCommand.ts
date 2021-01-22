@@ -68,7 +68,14 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		'sudokuBoard.jpg'
 	);
 
-	message.channel.send(attachment);
+	message.channel.send(
+		client
+			.embed({}, message)
+			.attachFiles([
+				{ name: 'sudokuBoard.png', attachment: attachment.attachment },
+			])
+			.setImage('attachment://sudokuBoard.png')
+	);
 };
 export const name: string = 'sudoku';
 export const category: string = 'Games';

@@ -73,8 +73,10 @@
 		}
 	},
 	"dependencies": {
+		"@canvacord/assets": "^1.0.2",
 		"@discordjs/opus": "^0.3.3",
 		"alpha-sort": "^4.0.0",
+		"canvacord": "^5.0.8",
 		"canvas": "^2.6.1",
 		"consola": "^2.15.0",
 		"discord-player": "^3.2.1",
@@ -91,6 +93,7 @@
 		"sourcebin_js": "^0.0.3-ignore",
 		"string-progressbar": "^1.0.1",
 		"sudoku": "^0.0.3",
+		"twemoji-parser": "^13.0.0",
 		"ytdl-core": "^4.4.4"
 	}
 }
