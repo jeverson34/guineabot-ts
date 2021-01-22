@@ -5,13 +5,13 @@
 - [Table of Contents](#table-of-contents)
 - [Description](#description)
 - [Commands](#commands)
+  - [Admin](#admin)
   - [Configuration](#configuration)
   - [Fun](#fun)
   - [Games](#games)
   - [Information](#information)
   - [Leveling](#leveling)
   - [Music](#music)
-  - [Admin](#admin)
 - [Installation](#installation)
   - [Prerequisites](#prerequisites)
   - [Initialization](#initialization)
@@ -23,6 +23,10 @@
 An all-purpose bot aimed to serve your Discord server with honor. All the commands you need are at your fingertips, commands are added almost every day. All commands are free and always will be.
 
 ## Commands
+
+### Admin
+
+- database
 
 ### Configuration
 
@@ -84,10 +88,6 @@ An all-purpose bot aimed to serve your Discord server with honor. All the comman
 - skip
 - stop
 - volume
-
-### Admin
-
-- db
 
 ## Installation
 
