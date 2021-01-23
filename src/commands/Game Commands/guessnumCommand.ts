@@ -1,8 +1,8 @@
-import { RunFunction } from '../../interfaces/Command';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'games') === true)
+	if (checkIfDisabled(message, "games") === true)
 		return await message.channel.send(
 			client.embed(
 				{ description: `Games are disabled in this server.` },
@@ -17,7 +17,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		client.embed(
 			{
 				description:
-					'I have generated a random number between 1 and 25, guess the number now!',
+					"I have generated a random number between 1 and 25, guess the number now!",
 			},
 			message
 		)
@@ -38,7 +38,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	if (isNaN(guess))
 		return message.channel.send(
 			client.embed(
-				{ description: 'You did not enter a valid number.' },
+				{ description: "You did not enter a valid number." },
 				message
 			)
 		);
@@ -62,6 +62,6 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		);
 };
 
-export const name: string = 'guessnum';
-export const category: string = 'Games';
-export const description: string = 'Guess the number';
+export const name: string = "guessnum";
+export const category: string = "Games";
+export const description: string = "Guess the number";

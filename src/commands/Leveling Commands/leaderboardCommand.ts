@@ -1,18 +1,21 @@
-import { RunFunction } from '../../interfaces/Command';
-import db from 'quick.db';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import db from "quick.db";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'leveling') === true)
+	if (checkIfDisabled(message, "leveling") === true)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'Leveling commands are disabled in this server.' },
+				{
+					description:
+						"Leveling commands are disabled in this server.",
+				},
 				message
 			)
 		);
 	const all = db.all();
 	let validUsers = [];
-	let str: string = '';
+	let str: string = "";
 
 	for (let i = 0; i < all.length; i++) {
 		if (all[i].ID.includes(`-${message.guild.id}-level`)) {
@@ -45,7 +48,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'leaderboard';
-export const category: string = 'Leveling';
-export const description: string = 'View most active members';
-export const aliases: string[] = ['lb'];
+export const name: string = "leaderboard";
+export const category: string = "Leveling";
+export const description: string = "View most active members";
+export const aliases: string[] = ["lb"];

@@ -1,8 +1,8 @@
-import { RunFunction } from '../../interfaces/Command';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'games') === true)
+	if (checkIfDisabled(message, "games") === true)
 		return await message.channel.send(
 			client.embed(
 				{ description: `Games are disabled in this server.` },
@@ -12,7 +12,8 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	message.reply(
 		client.embed(
 			{
-				description: 'Enter `r` for rock, `p` for paper, or `s` for scissors.',
+				description:
+					"Enter `r` for rock, `p` for paper, or `s` for scissors.",
 			},
 			message
 		)
@@ -32,19 +33,19 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	let answerLower = answer.toLowerCase();
 
 	//Check for invalid syntax
-	if (answerLower !== 'r' && answerLower !== 'p' && answerLower !== 's')
+	if (answerLower !== "r" && answerLower !== "p" && answerLower !== "s")
 		return message.reply(
 			client.embed(
 				{
 					description:
-						'You entered an invalid option, `r` for rock, `p` for paper, or `s` for scissors.',
+						"You entered an invalid option, `r` for rock, `p` for paper, or `s` for scissors.",
 				},
 				message
 			)
 		);
 
 	//Randomize the AI's answer
-	let AIanswers = ['r', 'p', 's'];
+	let AIanswers = ["r", "p", "s"];
 	let randomizer = Math.floor(Math.random() * AIanswers.length);
 	let response = AIanswers[randomizer];
 
@@ -60,7 +61,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		);
 
 	//Check for AI win
-	if (response === 'r' && answerLower === 's')
+	if (response === "r" && answerLower === "s")
 		return message.reply(
 			client.embed(
 				{
@@ -69,7 +70,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 				message
 			)
 		);
-	if (response === 'p' && answerLower === 'r')
+	if (response === "p" && answerLower === "r")
 		return message.reply(
 			client.embed(
 				{
@@ -78,7 +79,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 				message
 			)
 		);
-	if (response === 's' && answerLower === 'p')
+	if (response === "s" && answerLower === "p")
 		return message.reply(
 			client.embed(
 				{
@@ -89,7 +90,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		);
 
 	//Check for AI loss
-	if (answerLower === 'r' && response === 's')
+	if (answerLower === "r" && response === "s")
 		return message.reply(
 			client.embed(
 				{
@@ -98,7 +99,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 				message
 			)
 		);
-	if (answerLower === 'p' && response === 'r')
+	if (answerLower === "p" && response === "r")
 		return message.reply(
 			client.embed(
 				{
@@ -107,7 +108,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 				message
 			)
 		);
-	if (answerLower === 's' && response === 'p')
+	if (answerLower === "s" && response === "p")
 		return message.reply(
 			client.embed(
 				{
@@ -118,6 +119,6 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		);
 };
 
-export const name: string = 'rps';
-export const category: string = 'Games';
-export const description: string = 'Rock Paper Scissors game';
+export const name: string = "rps";
+export const category: string = "Games";
+export const description: string = "Rock Paper Scissors game";

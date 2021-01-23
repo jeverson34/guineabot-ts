@@ -1,21 +1,21 @@
-import { RunFunction } from '../../interfaces/Command';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'music') === true)
+	if (checkIfDisabled(message, "music") === true)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'Music commands are disabled in this server.' },
+				{ description: "Music commands are disabled in this server." },
 				message
 			)
 		);
 	const queue = await client.music.getQueue(message);
 	if (!queue)
 		return await message.channel.send(
-			client.embed({ description: 'Nothing...' }, message)
+			client.embed({ description: "Nothing..." }, message)
 		);
-	let previousTracks: string = '';
-	let tracks: string = '';
+	let previousTracks: string = "";
+	let tracks: string = "";
 
 	for (let i = 0; i < queue.previousTracks.length; i++) {
 		previousTracks += `${i + 1}. ${queue.previousTracks[i].title}\n`;
@@ -28,25 +28,25 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		client
 			.embed({}, message)
 			.addField(
-				'Previous Tracks:',
+				"Previous Tracks:",
 				previousTracks
 					? previousTracks.length > 1024
-						? previousTracks.substr(0, 1021) + '...'
+						? previousTracks.substr(0, 1021) + "..."
 						: previousTracks
-					: 'None, yet...'
+					: "None, yet..."
 			)
 			.addField(
-				'Current Queue:',
+				"Current Queue:",
 				tracks
 					? tracks.length > 1024
-						? tracks.substr(0, 1021) + '...'
+						? tracks.substr(0, 1021) + "..."
 						: tracks
-					: 'None, yet...'
+					: "None, yet..."
 			)
 	);
 };
 
-export const name: string = 'queue';
-export const category: string = 'Music';
-export const description: string = 'View the music queue';
-export const aliases: string[] = ['q'];
+export const name: string = "queue";
+export const category: string = "Music";
+export const description: string = "View the music queue";
+export const aliases: string[] = ["q"];

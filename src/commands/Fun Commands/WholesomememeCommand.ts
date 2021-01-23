@@ -1,16 +1,16 @@
-import { RunFunction } from '../../interfaces/Command';
-import got from 'got';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import got from "got";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message) => {
-	if (checkIfDisabled(message, 'fun') === true)
+	if (checkIfDisabled(message, "fun") === true)
 		return await message.channel.send(
 			client.embed(
 				{ description: `Fun commands are disabled in this server.` },
 				message
 			)
 		);
-	got('https://www.reddit.com/r/wholesomememes/random/.json').then(
+	got("https://www.reddit.com/r/wholesomememes/random/.json").then(
 		(response) => {
 			//Fetch most of the data from the reddit post it recieves
 			let content = JSON.parse(response.body);
@@ -34,8 +34,8 @@ export const run: RunFunction = async (client, message) => {
 	);
 };
 
-export const name: string = 'wholesomememe';
-export const category: string = 'Fun';
-export const aliases: string[] = ['wm'];
+export const name: string = "wholesomememe";
+export const category: string = "Fun";
+export const aliases: string[] = ["wm"];
 export const description: string =
-	'Get a random image from the wholesomememes subreddit';
+	"Get a random image from the wholesomememes subreddit";

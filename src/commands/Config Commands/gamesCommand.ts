@@ -1,8 +1,8 @@
-import { RunFunction } from '../../interfaces/Command';
-import db from 'quick.db';
+import { RunFunction } from "../../interfaces/Command";
+import db from "quick.db";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (!message.member.permissions.has('ADMINISTRATOR'))
+	if (!message.member.permissions.has("ADMINISTRATOR"))
 		return await message.channel.send(
 			client.embed(
 				{
@@ -13,13 +13,16 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		);
 
 	const current = await db.get(`${message.guild.id}-games`);
-	if (!current) await db.set(`${message.guild.id}-games`, 'on');
+	if (!current) await db.set(`${message.guild.id}-games`, "on");
 
 	if (!args.length)
 		return await message.channel.send(
-			client.embed({ description: `Games are turned **${current}**.` }, message)
+			client.embed(
+				{ description: `Games are turned **${current}**.` },
+				message
+			)
 		);
-	if (args[0].toLowerCase() !== 'on' && args[0].toLowerCase() !== 'off')
+	if (args[0].toLowerCase() !== "on" && args[0].toLowerCase() !== "off")
 		return await message.channel.send(
 			client.embed(
 				{ description: `Invalid option! Must be on or off.` },
@@ -46,6 +49,6 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'games';
-export const category: string = 'Server Configuration';
-export const description: string = 'Enable/Disable games.';
+export const name: string = "games";
+export const category: string = "Server Configuration";
+export const description: string = "Enable/Disable games.";

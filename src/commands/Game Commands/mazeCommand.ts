@@ -1,10 +1,10 @@
-import { RunFunction } from '../../interfaces/Command';
-import mazegeneration from 'maze-generation';
-import '../../declarations/replaceAt';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import mazegeneration from "maze-generation";
+import "../../declarations/replaceAt";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'games') === true)
+	if (checkIfDisabled(message, "games") === true)
 		return await message.channel.send(
 			client.embed(
 				{ description: `Games are disabled in this server.` },
@@ -21,48 +21,48 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 			)
 		);
 
-	if (args[0].toLowerCase() === 'easy') {
+	if (args[0].toLowerCase() === "easy") {
 		let mazestr = mazegeneration(
 			10,
 			10,
 			Math.floor(Math.random() * Number.MAX_SAFE_INTEGER),
-			'DEPTHFIRST'
+			"DEPTHFIRST"
 		).toString();
 		return message.channel.send(
-			'```css\n ↓ Start here\n' +
-				mazestr.replaceAt(mazestr.length - 2, ' ').replaceAt(1, ' ') +
-				' ← Finish here\n```'
+			"```css\n ↓ Start here\n" +
+				mazestr.replaceAt(mazestr.length - 2, " ").replaceAt(1, " ") +
+				" ← Finish here\n```"
 		);
-	} else if (args[0].toLowerCase() === 'medium') {
+	} else if (args[0].toLowerCase() === "medium") {
 		let mazestr = mazegeneration(
 			20,
 			20,
 			Math.floor(Math.random() * Number.MAX_SAFE_INTEGER),
-			'DEPTHFIRST'
+			"DEPTHFIRST"
 		).toString();
 		return message.channel.send(
-			'```css\n ↓ Start here\n' +
-				mazestr.replaceAt(mazestr.length - 2, ' ').replaceAt(1, ' ') +
-				' ← Finish here\n```'
+			"```css\n ↓ Start here\n" +
+				mazestr.replaceAt(mazestr.length - 2, " ").replaceAt(1, " ") +
+				" ← Finish here\n```"
 		);
-	} else if (args[0].toLowerCase() === 'hard') {
+	} else if (args[0].toLowerCase() === "hard") {
 		let mazestr = mazegeneration(
 			30,
 			30,
 			Math.floor(Math.random() * Number.MAX_SAFE_INTEGER),
-			'DEPTHFIRST'
+			"DEPTHFIRST"
 		).toString();
 		return message.channel.send(
-			'```css\n ↓ Start here\n' +
-				mazestr.replaceAt(mazestr.length - 2, ' ').replaceAt(1, ' ') +
-				' ← Finish here\n```'
+			"```css\n ↓ Start here\n" +
+				mazestr.replaceAt(mazestr.length - 2, " ").replaceAt(1, " ") +
+				" ← Finish here\n```"
 		);
 	}
 };
 
-export const name: string = 'maze';
-export const category: string = 'Games';
-export const description: string = 'Generate a maze to solve';
+export const name: string = "maze";
+export const category: string = "Games";
+export const description: string = "Generate a maze to solve";
 
 String.prototype.replaceAt = function (index, replacement) {
 	return (

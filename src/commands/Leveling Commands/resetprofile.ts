@@ -1,21 +1,24 @@
-import { RunFunction } from '../../interfaces/Command';
-import db from 'quick.db';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import db from "quick.db";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'leveling') === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: 'Leveling commands are disabled in this server.' },
-				message
-			)
-		);
-	if (!message.member.permissions.has('ADMINISTRATOR'))
+	if (checkIfDisabled(message, "leveling") === true)
 		return await message.channel.send(
 			client.embed(
 				{
 					description:
-						'You must have the administrator permission to run this command!',
+						"Leveling commands are disabled in this server.",
+				},
+				message
+			)
+		);
+	if (!message.member.permissions.has("ADMINISTRATOR"))
+		return await message.channel.send(
+			client.embed(
+				{
+					description:
+						"You must have the administrator permission to run this command!",
 				},
 				message
 			)
@@ -54,6 +57,6 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'resetprofile';
-export const category: string = 'Leveling';
-export const description: string = 'Set an XP profile to 0';
+export const name: string = "resetprofile";
+export const category: string = "Leveling";
+export const description: string = "Set an XP profile to 0";

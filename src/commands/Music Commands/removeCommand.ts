@@ -1,26 +1,32 @@
-import { RunFunction } from '../../interfaces/Command';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'music') === true)
+	if (checkIfDisabled(message, "music") === true)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'Music commands are disabled in this server.' },
+				{ description: "Music commands are disabled in this server." },
 				message
 			)
 		);
 	if (!message.member.voice.channel)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'You must be connected to a voice channel!' },
+				{ description: "You must be connected to a voice channel!" },
 				message
 			)
 		);
 	if (message.guild.me.voice.channel) {
-		if (message.guild.me.voice.channel.id !== message.member.voice.channel.id)
+		if (
+			message.guild.me.voice.channel.id !==
+			message.member.voice.channel.id
+		)
 			return await message.channel.send(
 				client.embed(
-					{ description: 'I am already connected to a voice channel!' },
+					{
+						description:
+							"I am already connected to a voice channel!",
+					},
 					message
 				)
 			);
@@ -30,7 +36,10 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	if (isNaN(position))
 		return await message.channel.send(
 			client.embed(
-				{ description: 'The position of the song has to be a numerical value' },
+				{
+					description:
+						"The position of the song has to be a numerical value",
+				},
 				message
 			)
 		);
@@ -51,7 +60,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	return message.channel.send(
 		client.embed(
 			{
-				title: 'Track removed',
+				title: "Track removed",
 				description: `Successfully removed **${removedTrack.title}** from the queue.`,
 			},
 			message
@@ -59,6 +68,6 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'remove';
-export const category: string = 'Music';
-export const description: string = 'Remove a specific song from the queue';
+export const name: string = "remove";
+export const category: string = "Music";
+export const description: string = "Remove a specific song from the queue";

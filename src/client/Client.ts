@@ -1,4 +1,4 @@
-import consola, { Consola } from 'consola';
+import consola, { Consola } from "consola";
 import {
 	Client,
 	MessageEmbedOptions,
@@ -6,13 +6,13 @@ import {
 	MessageEmbed,
 	Intents,
 	Collection,
-} from 'discord.js';
-import glob from 'glob';
-import { promisify } from 'util';
-import { Command } from '../interfaces/Command';
-import { Event } from '../interfaces/Event';
-import { Config } from '../interfaces/Config';
-import { Player } from 'discord-player';
+} from "discord.js";
+import glob from "glob";
+import { promisify } from "util";
+import { Command } from "../interfaces/Command";
+import { Event } from "../interfaces/Event";
+import { Config } from "../interfaces/Config";
+import { Player } from "discord-player";
 
 const globPromise = promisify(glob);
 
@@ -32,7 +32,7 @@ class Bot extends Client {
 			messageCacheMaxSize: 200,
 			messageEditHistoryMaxSize: 200,
 			messageSweepInterval: 180,
-			partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+			partials: ["MESSAGE", "CHANNEL", "REACTION"],
 		});
 		this.music = new Player(this, {
 			autoSelfDeaf: true,
@@ -42,7 +42,7 @@ class Bot extends Client {
 			leaveOnEmptyCooldown: 5000,
 			leaveOnEndCooldown: 5000,
 		})
-			.on('trackStart', (message, track) => {
+			.on("trackStart", (message, track) => {
 				message.channel.send(
 					this.embed(
 						{
@@ -56,11 +56,11 @@ class Bot extends Client {
 						.setFooter(`${track.views} views`)
 				);
 			})
-			.on('trackAdd', (message, queue, track) => {
+			.on("trackAdd", (message, queue, track) => {
 				message.channel.send(
 					this.embed(
 						{
-							title: 'Track added to queue',
+							title: "Track added to queue",
 							description: `**Track:** ${track.title} by ${track.author}\n**Duration:** ${track.duration}\n**Requested By:** ${track.requestedBy}`,
 							url: track.url,
 						},
@@ -70,7 +70,7 @@ class Bot extends Client {
 						.setFooter(`${track.views} views`)
 				);
 			})
-			.on('playlistAdd', (message, queue, playlist) => {
+			.on("playlistAdd", (message, queue, playlist) => {
 				message.channel.send(
 					this.embed(
 						{
@@ -84,25 +84,30 @@ class Bot extends Client {
 						.setFooter(`${playlist.views} views`)
 				);
 			})
-			.on('searchResults', (message, query, tracks) => {
+			.on("searchResults", (message, query, tracks) => {
 				message.channel.send(
 					this.embed(
 						{
 							title: `Search results for "${query}"`,
-							description: `${tracks.map((t, i) => `${i}. ${t.title}`)}`,
+							description: `${tracks.map(
+								(t, i) => `${i}. ${t.title}`
+							)}`,
 						},
 						message
-					).setFooter('Enter the search number to play the song')
+					).setFooter("Enter the search number to play the song")
 				);
 			})
 			.on(
-				'searchInvalidResponse',
+				"searchInvalidResponse",
 				(message, query, tracks, content, collector) => {
-					if (content.toLowerCase() == 'cancel') {
+					if (content.toLowerCase() == "cancel") {
 						collector.stop();
 						return message.channel.send(
 							this.embed(
-								{ title: `Search cancelled`, description: `Requested by user` },
+								{
+									title: `Search cancelled`,
+									description: `Requested by user`,
+								},
 								message
 							)
 						);
@@ -118,26 +123,28 @@ class Bot extends Client {
 					);
 				}
 			)
-			.on('searchCancel', (message, query, tracks) => {
+			.on("searchCancel", (message, query, tracks) => {
 				message.channel.send(
 					this.embed(
 						{
-							title: 'Search cancelled',
-							description: 'You did not provide a valid response',
+							title: "Search cancelled",
+							description: "You did not provide a valid response",
 						},
 						message
 					)
 				);
 			})
-			.on('noResults', (message, query) => {
+			.on("noResults", (message, query) => {
 				message.channel.send(
 					this.embed(
-						{ description: `No results found on YouTube for "${query}"` },
+						{
+							description: `No results found on YouTube for "${query}"`,
+						},
 						message
 					)
 				);
 			})
-			.on('queueEnd', (message, queue) => {
+			.on("queueEnd", (message, queue) => {
 				message.channel.send(
 					this.embed(
 						{ description: `Left voice channel, queue ended.` },
@@ -145,7 +152,7 @@ class Bot extends Client {
 					)
 				);
 			})
-			.on('channelEmpty', (message, queue) => {
+			.on("channelEmpty", (message, queue) => {
 				message.channel.send(
 					this.embed(
 						{ description: `Left voice channel, it was empty.` },
@@ -153,36 +160,41 @@ class Bot extends Client {
 					)
 				);
 			})
-			.on('botDisconnect', (message) => {
+			.on("botDisconnect", (message) => {
 				message.channel.send(
 					this.embed(
 						{
 							description:
-								'Queue ended, I have been disconnected from the voice channel.',
+								"Queue ended, I have been disconnected from the voice channel.",
 						},
 						message
 					)
 				);
 			})
-			.on('error', (error, message) => {
+			.on("error", (error, message) => {
 				switch (error) {
-					case 'NotPlaying':
+					case "NotPlaying":
 						message.channel.send(
 							this.embed(
-								{ description: `There is no music being played.` },
+								{
+									description: `There is no music being played.`,
+								},
 								message
 							)
 						);
 						break;
-					case 'NotConnected':
+					case "NotConnected":
 						message.channel.send(
 							this.embed(
-								{ description: 'You are not connected in any voice channel!' },
+								{
+									description:
+										"You are not connected in any voice channel!",
+								},
 								message
 							)
 						);
 						break;
-					case 'UnableToJoin':
+					case "UnableToJoin":
 						message.channel.send(
 							this.embed(
 								{
@@ -193,10 +205,13 @@ class Bot extends Client {
 							)
 						);
 						break;
-					case 'LiveVideo':
+					case "LiveVideo":
 						message.channel.send(
 							this.embed(
-								{ description: 'Youtube live streams are not supported.' },
+								{
+									description:
+										"Youtube live streams are not supported.",
+								},
 								message
 							)
 						);
@@ -225,7 +240,9 @@ class Bot extends Client {
 			});
 			this.categories.add(file.category);
 			if (file.aliases?.length) {
-				file.aliases.map((value: string) => this.aliases.set(value, file.name));
+				file.aliases.map((value: string) =>
+					this.aliases.set(value, file.name)
+				);
 			}
 		});
 		const eventFiles: string[] = await globPromise(
@@ -238,12 +255,12 @@ class Bot extends Client {
 		});
 	}
 	public embed(options: MessageEmbedOptions, message: Message): MessageEmbed {
-		return new MessageEmbed({ ...options, color: 'RANDOM' })
+		return new MessageEmbed({ ...options, color: "RANDOM" })
 			.setFooter(
 				`${message.author.tag}`,
 				message.author.displayAvatarURL({
 					dynamic: true,
-					format: 'png',
+					format: "png",
 				})
 			)
 			.setTimestamp();

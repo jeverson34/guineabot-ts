@@ -1,13 +1,16 @@
-import { RunFunction } from '../../interfaces/Command';
-import db from 'quick.db';
-import createBar from 'string-progressbar';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import db from "quick.db";
+import createBar from "string-progressbar";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'leveling') === true)
+	if (checkIfDisabled(message, "leveling") === true)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'Leveling commands are disabled in this server.' },
+				{
+					description:
+						"Leveling commands are disabled in this server.",
+				},
 				message
 			)
 		);
@@ -30,8 +33,8 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		(userInfo.level + 1) * (userInfo.level + 1) * 100,
 		userInfo.xp === 0 ? 1 : userInfo.xp,
 		40,
-		'—',
-		'🔵'
+		"—",
+		"🔵"
 	);
 
 	const percent = progress[1];
@@ -42,10 +45,11 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 				title: `${target.username}'s rank`,
 				description: `**Current XP count:** ${
 					userInfo.xp
-				}\n**Current Level:** ${userInfo.level}\n**XP required to reach level ${
-					userInfo.level + 1
-				}:** ${
-					(userInfo.level + 1) * (userInfo.level + 1) * 100 - userInfo.xp
+				}\n**Current Level:** ${
+					userInfo.level
+				}\n**XP required to reach level ${userInfo.level + 1}:** ${
+					(userInfo.level + 1) * (userInfo.level + 1) * 100 -
+					userInfo.xp
 				}\n\n\`${userInfo.level}〚${progress[0]}〛${
 					userInfo.level + 1
 				} (${parseFloat(percent as string).toFixed(1)} %)\``,
@@ -55,7 +59,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'rank';
-export const category: string = 'Leveling';
-export const description: string = 'Display what level you are';
-export const aliases: string[] = ['level'];
+export const name: string = "rank";
+export const category: string = "Leveling";
+export const description: string = "Display what level you are";
+export const aliases: string[] = ["level"];

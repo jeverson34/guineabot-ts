@@ -1,9 +1,9 @@
-import { RunFunction } from '../../interfaces/Command';
-import Minesweeper from 'discord.js-minesweeper';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import Minesweeper from "discord.js-minesweeper";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'games') === true)
+	if (checkIfDisabled(message, "games") === true)
 		return await message.channel.send(
 			client.embed(
 				{ description: `Games are disabled in this server.` },
@@ -33,11 +33,17 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	//Check for errors
 	if (!matrix)
 		return message.channel.send(
-			client.embed({ description: 'You have provided invalid data.' }, message)
+			client.embed(
+				{ description: "You have provided invalid data." },
+				message
+			)
 		);
 	if (matrix.length > 2048)
 		return message.channel.send(
-			client.embed({ description: 'Matrix is too large to send.' }, message)
+			client.embed(
+				{ description: "Matrix is too large to send." },
+				message
+			)
 		);
 
 	message.channel.send(
@@ -48,7 +54,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'mineswepeer';
-export const category: string = 'Games';
-export const description: string = 'The mineswepeer game using spoilers';
-export const aliases: string[] = ['sweeper'];
+export const name: string = "mineswepeer";
+export const category: string = "Games";
+export const description: string = "The mineswepeer game using spoilers";
+export const aliases: string[] = ["sweeper"];

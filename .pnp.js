@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
             ["consola", "npm:2.15.0"],
+            ["cpu-stat", "npm:2.0.1"],
             ["discord-player", "npm:3.2.1"],
             ["discord-tictactoe", "npm:2.0.7"],
             ["discord.js", "npm:12.5.1"],
@@ -61,7 +62,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],
             ["node-opus", "npm:0.3.3"],
             ["opusscript", "npm:0.0.7"],
+            ["os", "npm:0.1.1"],
             ["prettier", "npm:2.2.1"],
+            ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
             ["string-progressbar", "npm:1.0.1"],
@@ -1353,6 +1356,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["cpu-stat", [
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/cpu-stat-npm-2.0.1-18372d8991-aaaf75ded3.zip/node_modules/cpu-stat/",
+          "packageDependencies": [
+            ["cpu-stat", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["create-require", [
         ["npm:1.1.1", {
           "packageLocation": "./.yarn/cache/create-require-npm-1.1.1-839884ca2e-babd307893.zip/node_modules/create-require/",
@@ -2243,6 +2255,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
             ["consola", "npm:2.15.0"],
+            ["cpu-stat", "npm:2.0.1"],
             ["discord-player", "npm:3.2.1"],
             ["discord-tictactoe", "npm:2.0.7"],
             ["discord.js", "npm:12.5.1"],
@@ -2255,7 +2268,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],
             ["node-opus", "npm:0.3.3"],
             ["opusscript", "npm:0.0.7"],
+            ["os", "npm:0.1.1"],
             ["prettier", "npm:2.2.1"],
+            ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
             ["string-progressbar", "npm:1.0.1"],
@@ -3762,6 +3777,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["os", [
+        ["npm:0.1.1", {
+          "packageLocation": "./.yarn/cache/os-npm-0.1.1-b1e32a245a-624f0f7d38.zip/node_modules/os/",
+          "packageDependencies": [
+            ["os", "npm:0.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["os-homedir", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/os-homedir-npm-1.0.2-01f82faa88-725256246b.zip/node_modules/os-homedir/",
@@ -3882,6 +3906,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["error-ex", "npm:1.3.2"],
             ["json-parse-even-better-errors", "npm:2.3.1"],
             ["lines-and-columns", "npm:1.1.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["parse-ms", [
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/parse-ms-npm-2.1.0-de852c39bb-59c381bf87.zip/node_modules/parse-ms/",
+          "packageDependencies": [
+            ["parse-ms", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4072,6 +4105,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prettier-npm-2.2.1-e0670992f8-92c6c9f4b8.zip/node_modules/prettier/",
           "packageDependencies": [
             ["prettier", "npm:2.2.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["pretty-ms", [
+        ["npm:7.0.1", {
+          "packageLocation": "./.yarn/cache/pretty-ms-npm-7.0.1-d748cac064-34de13967b.zip/node_modules/pretty-ms/",
+          "packageDependencies": [
+            ["pretty-ms", "npm:7.0.1"],
+            ["parse-ms", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]

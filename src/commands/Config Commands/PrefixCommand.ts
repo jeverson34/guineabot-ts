@@ -1,10 +1,10 @@
-import { RunFunction } from '../../interfaces/Command';
-import db from 'quick.db';
+import { RunFunction } from "../../interfaces/Command";
+import db from "quick.db";
 
-export const name: string = 'prefix';
-export const category: string = 'Server Configuration';
+export const name: string = "prefix";
+export const category: string = "Server Configuration";
 export const description: string =
-	'Change/view the prefix for using Guineabot.';
+	"Change/view the prefix for using Guineabot.";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
 	if (!args.length)
@@ -16,7 +16,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 				message
 			)
 		);
-	if (!message.member.permissions.has('ADMINISTRATOR'))
+	if (!message.member.permissions.has("ADMINISTRATOR"))
 		return await message.channel.send(
 			client.embed(
 				{
@@ -28,7 +28,9 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	if (args[0].length > 3)
 		return await message.channel.send(
 			client.embed(
-				{ description: `The prefix must not be over 3 characters long!` },
+				{
+					description: `The prefix must not be over 3 characters long!`,
+				},
 				message
 			)
 		);
@@ -40,11 +42,14 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 			)
 		);
 
-	if (args[0].toLowerCase() === 'g?') {
+	if (args[0].toLowerCase() === "g?") {
 		await db.delete(`${message.guild.id}-prefix`);
 		return message.channel.send(
 			client.embed(
-				{ description: 'Done! The prefix is now reset to default (g?).' },
+				{
+					description:
+						"Done! The prefix is now reset to default (g?).",
+				},
 				message
 			)
 		);

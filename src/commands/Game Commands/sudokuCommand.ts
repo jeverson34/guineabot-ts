@@ -1,11 +1,11 @@
-import { RunFunction } from '../../interfaces/Command';
-import Canvas from 'canvas';
-import sudoku from 'sudoku';
-import Discord from 'discord.js';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import Canvas from "canvas";
+import sudoku from "sudoku";
+import Discord from "discord.js";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'games') === true)
+	if (checkIfDisabled(message, "games") === true)
 		return await message.channel.send(
 			client.embed(
 				{ description: `Games are disabled in this server.` },
@@ -16,14 +16,14 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	for (let i = 0; i < puzzle.length; i++) {
 		var index = puzzle.indexOf(null);
 		if (index !== -1) {
-			puzzle[index] = ' ';
+			puzzle[index] = " ";
 		}
 	}
 
 	// ---------canvas----------
 
 	const applyText = (canvas, text) => {
-		const ctx = canvas.getContext('2d');
+		const ctx = canvas.getContext("2d");
 
 		let fontSize = 70;
 
@@ -37,10 +37,10 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 
 	let grayPositions = [];
 
-	const image = './src/assets/sudoku/sudokuBoard.png';
+	const image = "./src/assets/sudoku/sudokuBoard.png";
 
 	const canvas = Canvas.createCanvas(555, 555);
-	const ctx = canvas.getContext('2d');
+	const ctx = canvas.getContext("2d");
 	const background = await Canvas.loadImage(image);
 	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -59,24 +59,24 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 
 	for (let m = 0; m < grayPositions.length; m++) {
 		ctx.font = applyText(canvas, puzzle[m]);
-		ctx.fillStyle = '#000000';
+		ctx.fillStyle = "#000000";
 		ctx.fillText(puzzle[m], grayPositions[m][0], grayPositions[m][1]);
 	}
 
 	const attachment = new Discord.MessageAttachment(
 		canvas.toBuffer(),
-		'sudokuBoard.jpg'
+		"sudokuBoard.jpg"
 	);
 
 	message.channel.send(
 		client
 			.embed({}, message)
 			.attachFiles([
-				{ name: 'sudokuBoard.png', attachment: attachment.attachment },
+				{ name: "sudokuBoard.png", attachment: attachment.attachment },
 			])
-			.setImage('attachment://sudokuBoard.png')
+			.setImage("attachment://sudokuBoard.png")
 	);
 };
-export const name: string = 'sudoku';
-export const category: string = 'Games';
-export const description: string = 'Sudoku board generator';
+export const name: string = "sudoku";
+export const category: string = "Games";
+export const description: string = "Sudoku board generator";

@@ -1,21 +1,24 @@
-import { RunFunction } from '../../interfaces/Command';
-import db from 'quick.db';
-import checkIfDisabled from '../../functions/checkIfDisabled';
+import { RunFunction } from "../../interfaces/Command";
+import db from "quick.db";
+import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, 'leveling') === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: 'Leveling commands are disabled in this server.' },
-				message
-			)
-		);
-	if (!message.member.permissions.has('ADMINISTRATOR'))
+	if (checkIfDisabled(message, "leveling") === true)
 		return await message.channel.send(
 			client.embed(
 				{
 					description:
-						'You must have the administrator permission to run this command!',
+						"Leveling commands are disabled in this server.",
+				},
+				message
+			)
+		);
+	if (!message.member.permissions.has("ADMINISTRATOR"))
+		return await message.channel.send(
+			client.embed(
+				{
+					description:
+						"You must have the administrator permission to run this command!",
 				},
 				message
 			)
@@ -28,13 +31,13 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	if (!amount)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'Please enter the level that has value' },
+				{ description: "Please enter the level that has value" },
 				message
 			)
 		);
 	if (amount < 0)
 		return await message.channel.send(
-			client.embed({ description: 'Number must be positive.' }, message)
+			client.embed({ description: "Number must be positive." }, message)
 		);
 
 	var userInfo = await db.get(`${target.id}-${message.guild.id}-level`);
@@ -68,7 +71,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 };
 
-export const name: string = 'setlevel';
-export const category: string = 'Leveling';
+export const name: string = "setlevel";
+export const category: string = "Leveling";
 export const description: string = "Set the level in someone's XP profile";
-export const aliases: string[] = ['setlvl'];
+export const aliases: string[] = ["setlvl"];
