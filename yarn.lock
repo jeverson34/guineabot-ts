@@ -837,6 +837,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/spotify-api@npm:*":
+  version: 2016.0.29
+  resolution: "@types/spotify-api@npm:2016.0.29"
+  checksum: c2fb78d015d8c75c65f72518df02c31b3f5ba54544bbc53defeebe887b71bf6b20a0bba8e5e5f0500fc94c0595f35fc47df4b09b454965bf698a50b12c4c8ad6
+  languageName: node
+  linkType: hard
+
+"@types/spotify-web-api-node@npm:^5":
+  version: 5.0.0
+  resolution: "@types/spotify-web-api-node@npm:5.0.0"
+  dependencies:
+    "@types/spotify-api": "*"
+  checksum: c5f22cc1030688ea899f6e0486820f3614de6a1235a817456cecc199a4a0a83dbf1292930ef180fce1defdf63de6e72b4e2da3ff2b6b99d3b696f5a5d4c301d1
+  languageName: node
+  linkType: hard
+
 "@types/strip-bom@npm:^3.0.0":
   version: 3.0.0
   resolution: "@types/strip-bom@npm:3.0.0"
@@ -2507,6 +2523,7 @@ fsevents@~2.3.1:
     "@types/ms": ^0.7.31
     "@types/node": ^14.14.22
     "@types/prettier": ^2.1.6
+    "@types/spotify-web-api-node": ^5
     alpha-sort: ^4.0.0
     axios: ^0.21.1
     canvacord: ^5.0.8
@@ -2534,6 +2551,7 @@ fsevents@~2.3.1:
     pretty-ms: ^7.0.1
     quick.db: ^7.1.3
     sourcebin_js: ^0.0.3-ignore
+    spotify-web-api-node: ^5.0.2
     string-progressbar: ^1.0.1
     sudoku: ^0.0.3
     ts-node: ^9.1.1
@@ -2541,7 +2559,7 @@ fsevents@~2.3.1:
     twemoji: ^13.0.1
     twemoji-parser: ^13.0.0
     typescript: ^4.1.3
-    ytdl-core: ^4.4.4
+    ytdl-core: latest
   languageName: unknown
   linkType: soft
 
@@ -5021,6 +5039,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"spotify-web-api-node@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "spotify-web-api-node@npm:5.0.2"
+  dependencies:
+    superagent: ^6.1.0
+  checksum: 9194f444e991a7712f221af0fa4413e1a1f8a1fba28450f37a42c0f2582c753afd51892a39788a82ddbffa6cf6fa9fb5b5cdca74cb0fed20cd4bf33f6813c5ac
+  languageName: node
+  linkType: hard
+
 "sprintf-js@npm:^1.1.2":
   version: 1.1.2
   resolution: "sprintf-js@npm:1.1.2"
@@ -5224,6 +5251,25 @@ fsevents@~2.3.1:
     readable-stream: ^3.6.0
     semver: ^7.3.2
   checksum: 369d3727aa400b590854481a4811d7ed4a8224f3ce3ec4a1dac92f573345d3785f173c7cb822560b8a799b9981dcef16c19d1bf175f5e72cc555695d20588e16
+  languageName: node
+  linkType: hard
+
+"superagent@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "superagent@npm:6.1.0"
+  dependencies:
+    component-emitter: ^1.3.0
+    cookiejar: ^2.1.2
+    debug: ^4.1.1
+    fast-safe-stringify: ^2.0.7
+    form-data: ^3.0.0
+    formidable: ^1.2.2
+    methods: ^1.1.2
+    mime: ^2.4.6
+    qs: ^6.9.4
+    readable-stream: ^3.6.0
+    semver: ^7.3.2
+  checksum: bc21d32d9dd1dd0e33df5f5e112e6796b010ae08d4402d61cc232de6204c8fb5aaa04ed717873c217e033fc80e7c2578aa4f1b607feec54627a5f724805c1e5b
   languageName: node
   linkType: hard
 
@@ -5837,13 +5883,13 @@ typescript@^4.1.3:
   languageName: node
   linkType: hard
 
-"ytdl-core@npm:^4.4.4":
-  version: 4.4.4
-  resolution: "ytdl-core@npm:4.4.4"
+"ytdl-core@npm:latest":
+  version: 4.4.5
+  resolution: "ytdl-core@npm:4.4.5"
   dependencies:
     m3u8stream: ^0.8.3
     miniget: ^4.0.0
     sax: ^1.1.3
-  checksum: 512549acac50eeed73130e92e06b10f1ce2df230e569fa459aa70aad2220a52fd4d48a47a733b4fb4e938fca9992b702a2f8948c8ec0b7b8dd1c5acd90f494d6
+  checksum: c94943e5c7acd20d8252381329e102412fe678d898caa0d69e9ddf0038a51ff0a5cc17eeb13119bea6713a94fae306562ea7941d25511be045df5c02e4c3d88d
   languageName: node
   linkType: hard

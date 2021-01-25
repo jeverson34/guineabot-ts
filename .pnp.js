@@ -47,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
+            ["@types/spotify-web-api-node", "npm:5.0.0"],
             ["alpha-sort", "npm:4.0.0"],
             ["axios", "npm:0.21.1"],
             ["canvacord", "npm:5.0.8"],
@@ -74,6 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
+            ["spotify-web-api-node", "npm:5.0.2"],
             ["string-progressbar", "npm:1.0.1"],
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
@@ -81,7 +83,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["twemoji", "npm:13.0.1"],
             ["twemoji-parser", "npm:13.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
-            ["ytdl-core", "npm:4.4.4"]
+            ["ytdl-core", "npm:4.4.5"]
           ],
           "linkType": "SOFT",
         }]
@@ -1360,6 +1362,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/responselike", "npm:1.0.0"],
             ["@types/node", "npm:14.14.21"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/spotify-api", [
+        ["npm:2016.0.29", {
+          "packageLocation": "./.yarn/cache/@types-spotify-api-npm-2016.0.29-bedf28c26d-c2fb78d015.zip/node_modules/@types/spotify-api/",
+          "packageDependencies": [
+            ["@types/spotify-api", "npm:2016.0.29"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/spotify-web-api-node", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/@types-spotify-web-api-node-npm-5.0.0-1f4abd5db1-c5f22cc103.zip/node_modules/@types/spotify-web-api-node/",
+          "packageDependencies": [
+            ["@types/spotify-web-api-node", "npm:5.0.0"],
+            ["@types/spotify-api", "npm:2016.0.29"]
           ],
           "linkType": "HARD",
         }]
@@ -3289,6 +3310,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
+            ["@types/spotify-web-api-node", "npm:5.0.0"],
             ["alpha-sort", "npm:4.0.0"],
             ["axios", "npm:0.21.1"],
             ["canvacord", "npm:5.0.8"],
@@ -3316,6 +3338,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
+            ["spotify-web-api-node", "npm:5.0.2"],
             ["string-progressbar", "npm:1.0.1"],
             ["sudoku", "npm:0.0.3"],
             ["ts-node", "virtual:12232dd9ff23e0b854f0049700eb98f322c3960ed9d73d40b70fe202c1c4524fbae1876b51ae9fee08df0a5efcfe41b532ebe69f53ea1a54cfd3f868970be81a#npm:9.1.1"],
@@ -3323,7 +3346,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["twemoji", "npm:13.0.1"],
             ["twemoji-parser", "npm:13.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
-            ["ytdl-core", "npm:4.4.4"]
+            ["ytdl-core", "npm:4.4.5"]
           ],
           "linkType": "SOFT",
         }]
@@ -6089,6 +6112,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["spotify-web-api-node", [
+        ["npm:5.0.2", {
+          "packageLocation": "./.yarn/cache/spotify-web-api-node-npm-5.0.2-56949ace62-9194f444e9.zip/node_modules/spotify-web-api-node/",
+          "packageDependencies": [
+            ["spotify-web-api-node", "npm:5.0.2"],
+            ["superagent", "npm:6.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["sprintf-js", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/sprintf-js-npm-1.1.2-ea16269a6d-50d2008328.zip/node_modules/sprintf-js/",
@@ -6288,6 +6321,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/superagent-npm-5.3.1-6885809125-369d3727aa.zip/node_modules/superagent/",
           "packageDependencies": [
             ["superagent", "npm:5.3.1"],
+            ["component-emitter", "npm:1.3.0"],
+            ["cookiejar", "npm:2.1.2"],
+            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2"],
+            ["fast-safe-stringify", "npm:2.0.7"],
+            ["form-data", "npm:3.0.0"],
+            ["formidable", "npm:1.2.2"],
+            ["methods", "npm:1.1.2"],
+            ["mime", "npm:2.5.0"],
+            ["qs", "npm:6.9.6"],
+            ["readable-stream", "npm:3.6.0"],
+            ["semver", "npm:7.3.4"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/superagent-npm-6.1.0-053b76aea5-bc21d32d9d.zip/node_modules/superagent/",
+          "packageDependencies": [
+            ["superagent", "npm:6.1.0"],
             ["component-emitter", "npm:1.3.0"],
             ["cookiejar", "npm:2.1.2"],
             ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2"],
@@ -6992,10 +7043,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.4.4", {
-          "packageLocation": "./.yarn/cache/ytdl-core-npm-4.4.4-2ebf768ed3-512549acac.zip/node_modules/ytdl-core/",
+        ["npm:4.4.5", {
+          "packageLocation": "./.yarn/cache/ytdl-core-npm-4.4.5-cce26bfa98-c94943e5c7.zip/node_modules/ytdl-core/",
           "packageDependencies": [
-            ["ytdl-core", "npm:4.4.4"],
+            ["ytdl-core", "npm:4.4.5"],
             ["m3u8stream", "npm:0.8.3"],
             ["miniget", "npm:4.1.0"],
             ["sax", "npm:1.2.4"]
