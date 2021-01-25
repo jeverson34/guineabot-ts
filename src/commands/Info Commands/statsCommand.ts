@@ -3,7 +3,7 @@ import formatBytes from "../../functions/formatBytes";
 import os from "os";
 import cpuStat from "cpu-stat";
 import prettyMs from "pretty-ms";
-import { memoryUsage } from "process";
+import formatHertz from "../../functions/formatHertz";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
 	var avgClockMHz = cpuStat.avgClockMHz();
@@ -28,7 +28,9 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	var memUsage = formatBytes(process.memoryUsage().heapUsed);
 	var memTotal = formatBytes(os.totalmem());
 
-	var cpuStr = `__Model:__ ${cpuName}\n__Core Count:__ ${cpuCores}\n__Average Clock Speed:__ ${avgClockMHz} MHz\n`;
+	var cpuStr = `__Model:__ ${cpuName}\n__Core Count:__ ${cpuCores}\n__Clock Speed:__ ${formatHertz(
+		avgClockMHz
+	)}\n`;
 	var osStr = `__Name:__ ${osVersion}\n__Platform:__ ${osPlatform}\n__Build:__ ${osBuild}\n__Type:__ ${osType}\n__Architecture:__ ${osArch}`;
 	var memoryStr = `__Total Memory:__ ${memTotal}\n__Memory Usage:__ ${memUsage}`;
 

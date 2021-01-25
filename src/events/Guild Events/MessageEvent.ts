@@ -4,9 +4,16 @@ import { Command } from "../../interfaces/Command";
 import db from "quick.db";
 import ms from "ms";
 import checkIfDisabled from "../../functions/checkIfDisabled";
+import cleverbot from "cleverbot-free";
 
 export const run: RunFunction = async (client, message: Message) => {
-	if (message.author.bot || !message.guild) return;
+	if (message.author.bot) return;
+	if (!message.guild)
+		return await cleverbot(message.content).then(async (response) => {
+			return await message.channel.send(
+				client.embed({ description: response }, message)
+			);
+		});
 	if (checkIfDisabled(message, "leveling") === false) {
 		const randomXp: number = Math.floor(Math.random() * 10) + 1;
 		let currentLevel = await db.get(
