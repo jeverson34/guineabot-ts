@@ -55,6 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
             ["cheerio", "npm:1.0.0-rc.5"],
+            ["child_process", "npm:1.0.2"],
             ["cleverbot-free", "npm:1.0.5"],
             ["color-diff", "npm:1.2.0"],
             ["consola", "npm:2.15.0"],
@@ -2045,6 +2046,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["child_process", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/child_process-npm-1.0.2-04e116a38e-5c55e32160.zip/node_modules/child_process/",
+          "packageDependencies": [
+            ["child_process", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["chokidar", [
         ["npm:3.5.1", {
           "packageLocation": "./.yarn/cache/chokidar-npm-3.5.1-205217279e-61b3f710f9.zip/node_modules/chokidar/",
@@ -3382,6 +3392,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
             ["cheerio", "npm:1.0.0-rc.5"],
+            ["child_process", "npm:1.0.2"],
             ["cleverbot-free", "npm:1.0.5"],
             ["color-diff", "npm:1.2.0"],
             ["consola", "npm:2.15.0"],

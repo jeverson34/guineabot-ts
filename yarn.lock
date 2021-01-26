@@ -1422,6 +1422,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"child_process@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "child_process@npm:1.0.2"
+  checksum: 5c55e3216012d6981ad4619cca38e7860d509cd412cac06ab895a5e554bd120d11eb01145aeea2d2bd2e35753f7fab14cb4d4360058415e1cc73e789733dfc21
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:^3.4.0":
   version: 3.5.1
   resolution: "chokidar@npm:3.5.1"
@@ -2584,6 +2591,7 @@ fsevents@~2.3.1:
     canvacord: ^5.0.8
     canvas: ^2.6.1
     cheerio: ^1.0.0-rc.5
+    child_process: ^1.0.2
     cleverbot-free: ^1.0.5
     color-diff: ^1.2.0
     consola: ^2.15.0

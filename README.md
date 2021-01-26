@@ -15,7 +15,7 @@
 
 ## Description
 
-An all-purpose bot aimed to serve your Discord server with honor. All the commands you need are at your fingertips, commands are added almost every day. All commands are free and always will be.
+An all-purpose bot aimed to serve your Discord server with honor. Commands are added almost every day. All commands are free and always will be.
 
 ## Installation
 
