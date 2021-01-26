@@ -1,16 +1,10 @@
 import { RunFunction } from "../../interfaces/Command";
-import checkIfDisabled from "../../functions/checkIfDisabled";4
+
+4;
 import db from "quick.db";
 import spotify from "spotify-web-api-node";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, "music") === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: "Music commands are disabled in this server." },
-				message
-			)
-		);
 	if (!message.member.voice.channel)
 		return await message.channel.send(
 			client.embed(
@@ -54,7 +48,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		redirectUri: "https://localhost:8888/callback",
 	});
 
-	const spotifyRegex = /^(spotify:track|https:\/\/[a-z]+\.spotify\.com\/track)/
+	const spotifyRegex = /^(spotify:track|https:\/\/[a-z]+\.spotify\.com\/track)/;
 	let search: any = args.join(" ");
 
 	if (!search)
@@ -66,54 +60,71 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 		);
 
 	if (spotifyRegex.test(search)) {
-		let trackID: string
+		let trackID: string;
 
 		if (search && search.includes("spotify:track:")) {
-			let track = search.split(":")
-			trackID = track[2]
+			let track = search.split(":");
+			trackID = track[2];
 		} else {
-			let track = search.split("/")
-			let track2 = track[4].split("?")
-			trackID = track2[0]
+			let track = search.split("/");
+			let track2 = track[4].split("?");
+			trackID = track2[0];
 		}
 
-		let savedToken = db.get(`spotify-token`)
-		let success: boolean
+		let savedToken = db.get(`spotify-token`);
+		let success: boolean;
 
 		if (!savedToken || savedToken.expires_in < Date.now()) {
-			await api.clientCredentialsGrant().then(async data => {
-				let token = data.body["access_token"]
-				let expiresIn: any = data.body["expires_in"]
-				api.setAccessToken(token)
-				db.set("spotify-token", {
-					token: token,
-					expires_in: expiresIn + Date.now()
+			await api
+				.clientCredentialsGrant()
+				.then(async (data) => {
+					let token = data.body["access_token"];
+					let expiresIn: any = data.body["expires_in"];
+					api.setAccessToken(token);
+					db.set("spotify-token", {
+						token: token,
+						expires_in: expiresIn + Date.now(),
+					});
+					success = true;
 				})
-				success = true
-			}).catch(err => {
-				client.logger.error(err)
-				success = false
-			})
+				.catch((err) => {
+					client.logger.error(err);
+					success = false;
+				});
 		} else {
-			api.setAccessToken(savedToken.token)
-			success = true
+			api.setAccessToken(savedToken.token);
+			success = true;
 		}
 
 		if (success === true) {
-			let dataFetched: SpotifyApi.SingleTrackResponse
-			search = await api.getTrack(trackID).then(async data => {
-				dataFetched = data.body;
-				let artistsA = []
-				let artists = dataFetched.artists.length
-				for (let i = 0; i < artists; i++) {
-					artistsA.push(dataFetched.artists[i].name)
-				}
-				let query = artistsA.join(", ") + " - " + dataFetched.name + " official audio"
-				return query
-			}).catch(err => {
-				client.logger.error(err)
-				return message.channel.send(client.embed({ description: `An error occurred: ${err.message}` }, message))
-			})
+			let dataFetched: SpotifyApi.SingleTrackResponse;
+			search = await api
+				.getTrack(trackID)
+				.then(async (data) => {
+					dataFetched = data.body;
+					let artistsA = [];
+					let artists = dataFetched.artists.length;
+					for (let i = 0; i < artists; i++) {
+						artistsA.push(dataFetched.artists[i].name);
+					}
+					let query =
+						artistsA.join(", ") +
+						" - " +
+						dataFetched.name +
+						" official audio";
+					return query;
+				})
+				.catch((err) => {
+					client.logger.error(err);
+					return message.channel.send(
+						client.embed(
+							{
+								description: `An error occurred: ${err.message}`,
+							},
+							message
+						)
+					);
+				});
 		}
 	}
 

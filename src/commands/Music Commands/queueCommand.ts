@@ -1,14 +1,6 @@
 import { RunFunction } from "../../interfaces/Command";
-import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, "music") === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: "Music commands are disabled in this server." },
-				message
-			)
-		);
 	const queue = await client.music.getQueue(message);
 	if (!queue)
 		return await message.channel.send(

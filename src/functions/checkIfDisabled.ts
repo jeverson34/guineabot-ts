@@ -20,10 +20,7 @@ function checkIfDisabled(message: Message, category: string) {
 
 		if (state === "on") return false;
 		else if (state === "off") return true;
-	} else
-		throw new Error(
-			`<Disable Check> -> ${category.toLowerCase()} is not a valid option`
-		);
+	} else return false;
 }
 
 export default checkIfDisabled;

@@ -1,14 +1,6 @@
 import { RunFunction } from "../../interfaces/Command";
-import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, "games") === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: `Games are disabled in this server.` },
-				message
-			)
-		);
 	//Random number from 1 to 25
 	var number = Math.floor(Math.random() * 24) + 1;
 

@@ -1,15 +1,7 @@
 import { RunFunction } from "../../interfaces/Command";
 import got from "got";
-import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message) => {
-	if (checkIfDisabled(message, "fun") === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: `Fun commands are disabled in this server.` },
-				message
-			)
-		);
 	got("https://www.reddit.com/r/blursedimages/random/.json").then(
 		(response) => {
 			//Fetch most of the data from the reddit post it recieves

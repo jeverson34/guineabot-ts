@@ -1,18 +1,7 @@
 import { RunFunction } from "../../interfaces/Command";
 import db from "quick.db";
-import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, "leveling") === true)
-		return await message.channel.send(
-			client.embed(
-				{
-					description:
-						"Leveling commands are disabled in this server.",
-				},
-				message
-			)
-		);
 	const all = db.all();
 	let validUsers = [];
 	let str: string = "";

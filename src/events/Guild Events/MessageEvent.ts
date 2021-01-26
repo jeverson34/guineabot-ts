@@ -96,6 +96,16 @@ export const run: RunFunction = async (client, message: Message) => {
 				message
 			)
 		);
+	const options: string[] = ["fun", "games", "leveling", "music"];
+	if (options.indexOf(command.category.toLowerCase()) !== -1) {
+		if (checkIfDisabled(message, command.category.toLowerCase()) === true)
+			return await message.channel.send(
+				client.embed(
+					{ description: "That command is disabled in this server." },
+					message
+				)
+			);
+	}
 	command.run(client, message, args, prefix).catch((reason: any) => {
 		message.channel.send(
 			client.embed(

@@ -44,14 +44,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/color-diff", "npm:1.1.0"],
             ["@types/figlet", "npm:1.2.1"],
             ["@types/glob", "npm:7.1.3"],
+            ["@types/jquery", "npm:3.5.5"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
+            ["@types/request", "npm:2.48.5"],
             ["@types/spotify-web-api-node", "npm:5.0.0"],
             ["alpha-sort", "npm:4.0.0"],
             ["axios", "npm:0.21.1"],
             ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
+            ["cheerio", "npm:1.0.0-rc.5"],
             ["cleverbot-free", "npm:1.0.5"],
             ["color-diff", "npm:1.2.0"],
             ["consola", "npm:2.15.0"],
@@ -74,6 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
+            ["request", "npm:2.88.2"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
             ["spotify-web-api-node", "npm:5.0.2"],
             ["string-progressbar", "npm:1.0.1"],
@@ -1238,6 +1242,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/caseless", [
+        ["npm:0.12.2", {
+          "packageLocation": "./.yarn/cache/@types-caseless-npm-0.12.2-fc711e5d73-492343e499.zip/node_modules/@types/caseless/",
+          "packageDependencies": [
+            ["@types/caseless", "npm:0.12.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/color-diff", [
         ["npm:1.1.0", {
           "packageLocation": "./.yarn/cache/@types-color-diff-npm-1.1.0-47280c0d08-544e32ee3b.zip/node_modules/@types/color-diff/",
@@ -1272,6 +1285,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-http-cache-semantics-npm-4.0.0-000c9dc8e0-e16fae56d4.zip/node_modules/@types/http-cache-semantics/",
           "packageDependencies": [
             ["@types/http-cache-semantics", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/jquery", [
+        ["npm:3.5.5", {
+          "packageLocation": "./.yarn/cache/@types-jquery-npm-3.5.5-d23de0fc59-9e3c344515.zip/node_modules/@types/jquery/",
+          "packageDependencies": [
+            ["@types/jquery", "npm:3.5.5"],
+            ["@types/sizzle", "npm:2.3.2"]
           ],
           "linkType": "HARD",
         }]
@@ -1356,12 +1379,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/request", [
+        ["npm:2.48.5", {
+          "packageLocation": "./.yarn/cache/@types-request-npm-2.48.5-12844fc214-74f1a250ca.zip/node_modules/@types/request/",
+          "packageDependencies": [
+            ["@types/request", "npm:2.48.5"],
+            ["@types/caseless", "npm:0.12.2"],
+            ["@types/node", "npm:14.14.21"],
+            ["@types/tough-cookie", "npm:4.0.0"],
+            ["form-data", "npm:2.5.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/responselike", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/@types-responselike-npm-1.0.0-85dd08af42-e6e6613c80.zip/node_modules/@types/responselike/",
           "packageDependencies": [
             ["@types/responselike", "npm:1.0.0"],
             ["@types/node", "npm:14.14.21"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/sizzle", [
+        ["npm:2.3.2", {
+          "packageLocation": "./.yarn/cache/@types-sizzle-npm-2.3.2-762bc9adaa-447a1c3f39.zip/node_modules/@types/sizzle/",
+          "packageDependencies": [
+            ["@types/sizzle", "npm:2.3.2"]
           ],
           "linkType": "HARD",
         }]
@@ -1399,6 +1444,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-strip-json-comments-npm-0.0.30-4d685379c3-2b9eff2690.zip/node_modules/@types/strip-json-comments/",
           "packageDependencies": [
             ["@types/strip-json-comments", "npm:0.0.30"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/tough-cookie", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/@types-tough-cookie-npm-4.0.0-c29cd799b9-5a0cccc6d0.zip/node_modules/@types/tough-cookie/",
+          "packageDependencies": [
+            ["@types/tough-cookie", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -3007,6 +3061,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:2.5.1", {
+          "packageLocation": "./.yarn/cache/form-data-npm-2.5.1-47256351b5-c46ee9a14a.zip/node_modules/form-data/",
+          "packageDependencies": [
+            ["form-data", "npm:2.5.1"],
+            ["asynckit", "npm:0.4.0"],
+            ["combined-stream", "npm:1.0.8"],
+            ["mime-types", "npm:2.1.28"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:3.0.0", {
           "packageLocation": "./.yarn/cache/form-data-npm-3.0.0-b01f488350-1af88217b4.zip/node_modules/form-data/",
           "packageDependencies": [
@@ -3307,14 +3371,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/color-diff", "npm:1.1.0"],
             ["@types/figlet", "npm:1.2.1"],
             ["@types/glob", "npm:7.1.3"],
+            ["@types/jquery", "npm:3.5.5"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
+            ["@types/request", "npm:2.48.5"],
             ["@types/spotify-web-api-node", "npm:5.0.0"],
             ["alpha-sort", "npm:4.0.0"],
             ["axios", "npm:0.21.1"],
             ["canvacord", "npm:5.0.8"],
             ["canvas", "npm:2.6.1"],
+            ["cheerio", "npm:1.0.0-rc.5"],
             ["cleverbot-free", "npm:1.0.5"],
             ["color-diff", "npm:1.2.0"],
             ["consola", "npm:2.15.0"],
@@ -3337,6 +3404,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
+            ["request", "npm:2.88.2"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
             ["spotify-web-api-node", "npm:5.0.2"],
             ["string-progressbar", "npm:1.0.1"],

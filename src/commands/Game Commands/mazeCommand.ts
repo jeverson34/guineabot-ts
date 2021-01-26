@@ -1,16 +1,8 @@
 import { RunFunction } from "../../interfaces/Command";
 import mazegeneration from "maze-generation";
 import "../../declarations/replaceAt";
-import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, "games") === true)
-		return await message.channel.send(
-			client.embed(
-				{ description: `Games are disabled in this server.` },
-				message
-			)
-		);
 	if (!args.length)
 		return await message.channel.send(
 			client.embed(

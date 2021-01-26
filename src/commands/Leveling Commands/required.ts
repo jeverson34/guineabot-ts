@@ -1,17 +1,6 @@
 import { RunFunction } from "../../interfaces/Command";
-import checkIfDisabled from "../../functions/checkIfDisabled";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
-	if (checkIfDisabled(message, "leveling") === true)
-		return await message.channel.send(
-			client.embed(
-				{
-					description:
-						"Leveling commands are disabled in this server.",
-				},
-				message
-			)
-		);
 	if (!args.length)
 		return await message.channel.send(
 			client.embed({ description: "Please enter a number." }, message)
