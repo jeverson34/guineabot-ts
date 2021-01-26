@@ -75,6 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-opus", "npm:0.3.3"],
             ["opusscript", "npm:0.0.7"],
             ["os", "npm:0.1.1"],
+            ["owoify-js", "npm:1.0.7"],
             ["prettier", "npm:2.2.1"],
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
@@ -3412,6 +3413,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-opus", "npm:0.3.3"],
             ["opusscript", "npm:0.0.7"],
             ["os", "npm:0.1.1"],
+            ["owoify-js", "npm:1.0.7"],
             ["prettier", "npm:2.2.1"],
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
@@ -5080,6 +5082,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["osenv", "npm:0.1.5"],
             ["os-homedir", "npm:1.0.2"],
             ["os-tmpdir", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["owoify-js", [
+        ["npm:1.0.7", {
+          "packageLocation": "./.yarn/cache/owoify-js-npm-1.0.7-69118ff282-1b09fe11cd.zip/node_modules/owoify-js/",
+          "packageDependencies": [
+            ["owoify-js", "npm:1.0.7"]
           ],
           "linkType": "HARD",
         }]
