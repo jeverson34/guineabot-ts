@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# Hello! 👋
 
-You can use the [editor on GitHub](https://github.com/Cy1der/guineabot-ts/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![Guineabot Banner](https://cdn.discordapp.com/attachments/798689993761488966/802216129471840296/banner.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Table of Contents
 
-### Markdown
+- [Hello! 👋](#hello-)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Initialization](#initialization)
+  - [Support](#support)
+  - [Credits](#credits)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Description
 
-```markdown
-Syntax highlighted code block
+An all-purpose bot aimed to serve your Discord server with honor. Commands are added almost every day. All commands are free and always will be.
 
-# Header 1
-## Header 2
-### Header 3
+## Installation
 
-- Bulleted
-- List
+### Prerequisites
 
-1. Numbered
-2. List
+- **node.js** v14.15.4 or higher ([Download here](https://nodejs.org/en/download))
+- **yarn** installed (`npm i -g yarn`)
 
-**Bold** and _Italic_ and `Code` text
+### Initialization
 
-[Link](url) and ![Image](src)
+Run the following commands in their order:
+
+```cmd
+yarn install
+yarn test
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Support
 
-### Jekyll Themes
+Need help or have a question regarding Guineabot? [Join our support server!](https://discord.gg/6KpZhR3SRP)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Cy1der/guineabot-ts/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Credits
 
-### Support or Contact
+**Huge** thanks to [salvage_dev](https://www.youtube.com/channel/UC7-pjRSGoNEMoIujwOH2Mhw) for the main framework of the bot and command handler. [Join his Discord server!](https://discord.gg/3ucGCpa)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+\
+\
+\
+Made by Cy1der with 💖.
