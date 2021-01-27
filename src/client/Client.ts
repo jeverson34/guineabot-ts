@@ -24,7 +24,8 @@ class Bot extends Client {
 	public cooldowns: Collection<string, number> = new Collection();
 	public categories: Set<string> = new Set();
 	public config: Config;
-	public music;
+	public music: Player;
+	public recent = new Set();
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },

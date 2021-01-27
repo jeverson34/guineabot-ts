@@ -76,6 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["maze-generation", "npm:2.1.0"],
             ["ms", "npm:2.1.3"],
             ["node-opus", "npm:0.3.3"],
+            ["node-superfetch", "npm:0.1.10"],
             ["opusscript", "npm:0.0.7"],
             ["os", "npm:0.1.1"],
             ["owoify-js", "npm:1.0.7"],
@@ -3472,6 +3473,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["maze-generation", "npm:2.1.0"],
             ["ms", "npm:2.1.3"],
             ["node-opus", "npm:0.3.3"],
+            ["node-superfetch", "npm:0.1.10"],
             ["opusscript", "npm:0.0.7"],
             ["os", "npm:0.1.1"],
             ["owoify-js", "npm:1.0.7"],
@@ -4913,6 +4915,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:2.7.1"],
             ["semver", "npm:5.7.1"],
             ["tar", "npm:4.4.13"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["node-superfetch", [
+        ["npm:0.1.10", {
+          "packageLocation": "./.yarn/cache/node-superfetch-npm-0.1.10-460019e8aa-657e600976.zip/node_modules/node-superfetch/",
+          "packageDependencies": [
+            ["node-superfetch", "npm:0.1.10"],
+            ["form-data", "npm:2.5.1"],
+            ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
         }]

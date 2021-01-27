@@ -2317,7 +2317,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^2.5.0":
+"form-data@npm:^2.3.2, form-data@npm:^2.5.0":
   version: 2.5.1
   resolution: "form-data@npm:2.5.1"
   dependencies:
@@ -2658,6 +2658,7 @@ fsevents@~2.3.1:
     maze-generation: ^2.1.0
     ms: ^2.1.3
     node-opus: ^0.3.3
+    node-superfetch: ^0.1.10
     opusscript: ^0.0.7
     os: ^0.1.1
     owoify-js: ^1.0.7
@@ -3953,6 +3954,16 @@ fsevents@~2.3.1:
   bin:
     node-pre-gyp: ./bin/node-pre-gyp
   checksum: c166a62588f1f72f2098449add3c6400d31d2127dd059df0064f53d2089bbffc7d0e22e5ae4890518974df6e7c09a536e9e23d5a9831762d777e8f186a3d970c
+  languageName: node
+  linkType: hard
+
+"node-superfetch@npm:^0.1.10":
+  version: 0.1.10
+  resolution: "node-superfetch@npm:0.1.10"
+  dependencies:
+    form-data: ^2.3.2
+    node-fetch: ^2.6.0
+  checksum: 657e60097678947761688d1b2b57449d7f95720ca79bdf306806961913ec964cc108cbb657d94e70bcd2de6abc359a0b248591154993a2c169fc20faa7fb1a99
   languageName: node
   linkType: hard
 

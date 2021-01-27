@@ -15,51 +15,62 @@ export const run: RunFunction = async (client, message: Message) => {
 			);
 		});
 	if (checkIfDisabled(message, "leveling") === false) {
-		const randomXp: number = Math.floor(Math.random() * 10) + 1;
-		let currentLevel = await db.get(
-			`${message.author.id}-${message.guild.id}-level`
-		);
-		if (!currentLevel) {
-			const newProfile = {
-				guildID: message.guild.id,
-				userID: message.author.id,
-				level: Math.floor(0.1 * Math.sqrt(randomXp)),
-				xp: randomXp,
-			};
+		if (!client.recent.has(`${message.author.id}-${message.guild.id}`)) {
+			const randomXp: number = Math.floor(Math.random() * 10) + 1;
+			let currentLevel = await db.get(
+				`${message.author.id}-${message.guild.id}-level`
+			);
+			if (!currentLevel) {
+				const newProfile = {
+					guildID: message.guild.id,
+					userID: message.author.id,
+					level: Math.floor(0.1 * Math.sqrt(randomXp)),
+					xp: randomXp,
+				};
 
-			currentLevel = await db.set(
-				`${message.author.id}-${message.guild.id}-level`,
-				newProfile
-			);
-		}
+				currentLevel = await db.set(
+					`${message.author.id}-${message.guild.id}-level`,
+					newProfile
+				);
+			}
 
-		const appendXp = await db.set(
-			`${message.author.id}-${message.guild.id}-level.xp`,
-			currentLevel.xp + randomXp
-		);
-		if (
-			Math.floor(0.1 * Math.sqrt((appendXp.xp -= randomXp))) >
-				appendXp.level ||
-			appendXp.xp >= (appendXp.level + 1) * (appendXp.level + 1) * 100
-		) {
-			message.channel.send(
-				client.embed(
-					{
-						description: `LEVEL UP! Congratulations ${
-							message.author
-						} on leveling up to level **${appendXp.level + 1}**!`,
-					},
-					message
-				)
-			);
-			await db.set(
-				`${message.author.id}-${message.guild.id}-level.level`,
-				appendXp.level + 1
-			);
-			await db.set(
+			const appendXp = await db.set(
 				`${message.author.id}-${message.guild.id}-level.xp`,
-				0
+				currentLevel.xp + randomXp
 			);
+			if (
+				Math.floor(0.1 * Math.sqrt((appendXp.xp -= randomXp))) >
+					appendXp.level ||
+				appendXp.xp >= (appendXp.level + 1) * (appendXp.level + 1) * 100
+			) {
+				message.channel.send(
+					client.embed(
+						{
+							description: `LEVEL UP! Congratulations ${
+								message.author
+							} on leveling up to level **${
+								appendXp.level + 1
+							}**!`,
+						},
+						message
+					)
+				);
+				await db.set(
+					`${message.author.id}-${message.guild.id}-level.level`,
+					appendXp.level + 1
+				);
+				await db.set(
+					`${message.author.id}-${message.guild.id}-level.xp`,
+					0
+				);
+			}
+
+			client.recent.add(`${message.author.id}-${message.guild.id}`);
+			setTimeout(() => {
+				client.recent.delete(
+					`${message.author.id}-${message.guild.id}`
+				);
+			}, ms("1m"));
 		}
 	}
 

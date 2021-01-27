@@ -1,6 +1,7 @@
 import { RunFunction } from "../../interfaces/Command";
 import axios from "axios";
 import bin from "sourcebin_js";
+import ms from "ms";
 
 export const run: RunFunction = async (client, message, args, prefix) => {
 	if (!args.length)
@@ -120,3 +121,4 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 export const name: string = "define";
 export const category: string = "Utility";
 export const description: string = "Word dictionary";
+export const cooldown: number = ms("30s");
