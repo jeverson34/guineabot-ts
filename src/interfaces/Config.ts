@@ -4,4 +4,5 @@ export interface Config {
 	rapid_api_key: string;
 	spotify_client_id: string;
 	spotify_client_secret: string;
+	dictionary_api_key: string;
 }

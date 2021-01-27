@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/figlet", "npm:1.2.1"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/jquery", "npm:3.5.5"],
+            ["@types/mathjs", "npm:6.0.11"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
@@ -65,11 +66,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:12.5.1"],
             ["discord.js-minesweeper", "npm:1.0.6"],
             ["figlet", "npm:1.5.0"],
+            ["flip-text", "npm:1.1.0"],
             ["glob", "npm:7.1.6"],
             ["got", "npm:11.8.1"],
             ["husky", "npm:4.3.8"],
             ["jimp", "npm:0.16.1"],
             ["lint-staged", "npm:10.5.3"],
+            ["mathjs", "npm:9.0.0"],
             ["maze-generation", "npm:2.1.0"],
             ["ms", "npm:2.1.3"],
             ["node-opus", "npm:0.3.3"],
@@ -1311,6 +1314,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/mathjs", [
+        ["npm:6.0.11", {
+          "packageLocation": "./.yarn/cache/@types-mathjs-npm-6.0.11-7d2160a90d-3e24a7dda4.zip/node_modules/@types/mathjs/",
+          "packageDependencies": [
+            ["@types/mathjs", "npm:6.0.11"],
+            ["decimal.js", "npm:10.2.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/minimatch", [
         ["npm:3.0.3", {
           "packageLocation": "./.yarn/cache/@types-minimatch-npm-3.0.3-c8b0625f84-672ccdac19.zip/node_modules/@types/minimatch/",
@@ -2259,6 +2272,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["complex.js", [
+        ["npm:2.0.11", {
+          "packageLocation": "./.yarn/cache/complex.js-npm-2.0.11-89ac9823c9-00305ab626.zip/node_modules/complex.js/",
+          "packageDependencies": [
+            ["complex.js", "npm:2.0.11"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["component-emitter", [
         ["npm:1.3.0", {
           "packageLocation": "./.yarn/cache/component-emitter-npm-1.3.0-4b848565b9-fc4edbf101.zip/node_modules/component-emitter/",
@@ -2554,6 +2576,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["decimal.js", [
+        ["npm:10.2.1", {
+          "packageLocation": "./.yarn/cache/decimal.js-npm-10.2.1-6eff4c0574-ba28b27bb8.zip/node_modules/decimal.js/",
+          "packageDependencies": [
+            ["decimal.js", "npm:10.2.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["decompress-response", [
         ["npm:4.2.1", {
           "packageLocation": "./.yarn/cache/decompress-response-npm-4.2.1-abe5b4ebe4-d854171a10.zip/node_modules/decompress-response/",
@@ -2840,6 +2871,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["escape-latex", [
+        ["npm:1.2.0", {
+          "packageLocation": "./.yarn/cache/escape-latex-npm-1.2.0-1481ca81a7-d8012eb447.zip/node_modules/escape-latex/",
+          "packageDependencies": [
+            ["escape-latex", "npm:1.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["escape-string-regexp", [
         ["npm:1.0.5", {
           "packageLocation": "./.yarn/cache/escape-string-regexp-npm-1.0.5-3284de402f-f9484b8b4c.zip/node_modules/escape-string-regexp/",
@@ -3032,6 +3072,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["flip-text", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/flip-text-npm-1.1.0-ebeafd594c-968f51fedc.zip/node_modules/flip-text/",
+          "packageDependencies": [
+            ["flip-text", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["follow-redirects", [
         ["npm:1.13.1", {
           "packageLocation": "./.yarn/cache/follow-redirects-npm-1.13.1-7cb0be11a2-c7c6c90587.zip/node_modules/follow-redirects/",
@@ -3098,6 +3147,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/formidable-npm-1.2.2-0f629105a1-9fe5ef38d5.zip/node_modules/formidable/",
           "packageDependencies": [
             ["formidable", "npm:1.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["fraction.js", [
+        ["npm:4.0.13", {
+          "packageLocation": "./.yarn/cache/fraction.js-npm-4.0.13-01647fa6a5-1e9ec132b0.zip/node_modules/fraction.js/",
+          "packageDependencies": [
+            ["fraction.js", "npm:4.0.13"]
           ],
           "linkType": "HARD",
         }]
@@ -3383,6 +3441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/figlet", "npm:1.2.1"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/jquery", "npm:3.5.5"],
+            ["@types/mathjs", "npm:6.0.11"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.22"],
             ["@types/prettier", "npm:2.1.6"],
@@ -3403,11 +3462,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:12.5.1"],
             ["discord.js-minesweeper", "npm:1.0.6"],
             ["figlet", "npm:1.5.0"],
+            ["flip-text", "npm:1.1.0"],
             ["glob", "npm:7.1.6"],
             ["got", "npm:11.8.1"],
             ["husky", "npm:4.3.8"],
             ["jimp", "npm:0.16.1"],
             ["lint-staged", "npm:10.5.3"],
+            ["mathjs", "npm:9.0.0"],
             ["maze-generation", "npm:2.1.0"],
             ["ms", "npm:2.1.3"],
             ["node-opus", "npm:0.3.3"],
@@ -3918,6 +3979,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["javascript-natural-sort", [
+        ["npm:0.7.1", {
+          "packageLocation": "./.yarn/cache/javascript-natural-sort-npm-0.7.1-9018625996-f097317419.zip/node_modules/javascript-natural-sort/",
+          "packageDependencies": [
+            ["javascript-natural-sort", "npm:0.7.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["jimp", [
         ["npm:0.16.1", {
           "packageLocation": "./.yarn/cache/jimp-npm-0.16.1-18560af460-bf2f18a951.zip/node_modules/jimp/",
@@ -4335,6 +4405,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/math-interval-parser-npm-2.0.1-332d42b62f-0b1a94192b.zip/node_modules/math-interval-parser/",
           "packageDependencies": [
             ["math-interval-parser", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["mathjs", [
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/mathjs-npm-9.0.0-3fe23943bf-d5eb86f172.zip/node_modules/mathjs/",
+          "packageDependencies": [
+            ["mathjs", "npm:9.0.0"],
+            ["complex.js", "npm:2.0.11"],
+            ["decimal.js", "npm:10.2.1"],
+            ["escape-latex", "npm:1.2.0"],
+            ["fraction.js", "npm:4.0.13"],
+            ["javascript-natural-sort", "npm:0.7.1"],
+            ["seedrandom", "npm:3.0.5"],
+            ["tiny-emitter", "npm:2.1.0"],
+            ["typed-function", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -5940,6 +6027,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["seedrandom", [
+        ["npm:3.0.5", {
+          "packageLocation": "./.yarn/cache/seedrandom-npm-3.0.5-6946e8f8db-8ca859bd79.zip/node_modules/seedrandom/",
+          "packageDependencies": [
+            ["seedrandom", "npm:3.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["semver", [
         ["npm:5.7.1", {
           "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-06ff0ed753.zip/node_modules/semver/",
@@ -6564,6 +6660,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["tiny-emitter", [
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/tiny-emitter-npm-2.1.0-2a4d94f487-0055509c72.zip/node_modules/tiny-emitter/",
+          "packageDependencies": [
+            ["tiny-emitter", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["tinycolor2", [
         ["npm:1.4.2", {
           "packageLocation": "./.yarn/cache/tinycolor2-npm-1.4.2-462ba30c26-cf33d084cb.zip/node_modules/tinycolor2/",
@@ -6789,6 +6894,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.8.1-351ad028fe-f8c4b4249f.zip/node_modules/type-fest/",
           "packageDependencies": [
             ["type-fest", "npm:0.8.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["typed-function", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/typed-function-npm-2.0.0-6a33283314-0bf5a920ac.zip/node_modules/typed-function/",
+          "packageDependencies": [
+            ["typed-function", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]

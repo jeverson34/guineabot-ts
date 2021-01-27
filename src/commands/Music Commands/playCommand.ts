@@ -1,6 +1,4 @@
 import { RunFunction } from "../../interfaces/Command";
-
-4;
 import db from "quick.db";
 import spotify from "spotify-web-api-node";
 
