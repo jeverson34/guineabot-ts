@@ -107,7 +107,7 @@ export const run: RunFunction = async (client, message: Message) => {
 				message
 			)
 		);
-	const options: string[] = ["fun", "games", "leveling", "music"];
+	const options: string[] = ["fun", "games", "leveling", "music", "utility"];
 	if (options.indexOf(command.category.toLowerCase()) !== -1) {
 		if (checkIfDisabled(message, command.category.toLowerCase()) === true)
 			return await message.channel.send(

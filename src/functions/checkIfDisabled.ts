@@ -2,7 +2,7 @@ import db from "quick.db";
 import { Message } from "discord.js";
 
 function checkIfDisabled(message: Message, category: string) {
-	const options: string[] = ["fun", "games", "leveling", "music"];
+	const options: string[] = ["fun", "games", "leveling", "music", "utility"];
 
 	if (options.indexOf(category.toLowerCase()) != -1) {
 		let state = db.get(

@@ -5,7 +5,7 @@ async function encode(client: Bot, char: string) {
 		method: "GET",
 		url: `https://api.snowflakedev.xyz/api/morse/encode?text=${char}`,
 		headers: {
-			"Authorization": client.config.snowflake_api_key,
+			Authorization: client.config.snowflake_api_key,
 		},
 	};
 
@@ -20,7 +20,7 @@ async function decode(client: Bot, char: string) {
 		method: "GET",
 		url: `https://api.snowflakedev.xyz/api/morse/decode?text=${char}`,
 		headers: {
-			"Authorization": client.config.snowflake_api_key,
+			Authorization: client.config.snowflake_api_key,
 		},
 	};
 
