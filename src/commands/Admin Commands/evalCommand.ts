@@ -14,7 +14,7 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 			client.embed({ description: "Please enter the query." }, message)
 		);
 
-	let result = await eval(args.slice(0).join(" "))
+	let result = await eval(args.slice(0).join(" "));
 
 	if (typeof result === "object") result = JSON.stringify(result, null, 4);
 	return await message.channel.send(

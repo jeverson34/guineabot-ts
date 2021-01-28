@@ -8,4 +8,5 @@ export interface Config {
 	google_api_key: string;
 	google_csx: string;
 	snowflake_api_key: string;
+	thesaurus_api_key: string;
 }

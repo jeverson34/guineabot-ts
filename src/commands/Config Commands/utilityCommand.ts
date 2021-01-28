@@ -32,7 +32,9 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	if (args[0].toLowerCase() === current)
 		return await message.channel.send(
 			client.embed(
-				{ description: `Utility commands are already turned **${current}**!` },
+				{
+					description: `Utility commands are already turned **${current}**!`,
+				},
 				message
 			)
 		);
@@ -43,7 +45,9 @@ export const run: RunFunction = async (client, message, args, prefix) => {
 	);
 	return await message.channel.send(
 		client.embed(
-			{ description: `Successfully turned **${newOption}** utility commands.` },
+			{
+				description: `Successfully turned **${newOption}** utility commands.`,
+			},
 			message
 		)
 	);

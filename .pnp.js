@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@discordjs/opus", "npm:0.3.3"],
+            ["@k3rn31p4nic/google-translate-api", "npm:1.1.1"],
             ["@types/color-diff", "npm:1.1.0"],
             ["@types/figlet", "npm:1.2.1"],
             ["@types/glob", "npm:7.1.3"],
@@ -83,6 +84,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
+            ["relevant-urban", "npm:2.0.0"],
             ["request", "npm:2.88.2"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
             ["spotify-web-api-node", "npm:5.0.2"],
@@ -93,6 +95,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["twemoji", "npm:13.0.1"],
             ["twemoji-parser", "npm:13.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
+            ["weather-js", "npm:2.0.0"],
             ["ytdl-core", "npm:4.4.5"]
           ],
           "linkType": "SOFT",
@@ -1203,6 +1206,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jimp/utils", "npm:0.16.1"],
             ["@babel/runtime", "npm:7.12.5"],
             ["regenerator-runtime", "npm:0.13.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@k3rn31p4nic/google-translate-api", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/@k3rn31p4nic-google-translate-api-npm-1.1.1-b02f60a686-f81f0648ac.zip/node_modules/@k3rn31p4nic/google-translate-api/",
+          "packageDependencies": [
+            ["@k3rn31p4nic/google-translate-api", "npm:1.1.1"],
+            ["got", "npm:11.8.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3438,6 +3451,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@discordjs/opus", "npm:0.3.3"],
+            ["@k3rn31p4nic/google-translate-api", "npm:1.1.1"],
             ["@types/color-diff", "npm:1.1.0"],
             ["@types/figlet", "npm:1.2.1"],
             ["@types/glob", "npm:7.1.3"],
@@ -3480,6 +3494,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["pretty-ms", "npm:7.0.1"],
             ["quick.db", "npm:7.1.3"],
+            ["relevant-urban", "npm:2.0.0"],
             ["request", "npm:2.88.2"],
             ["sourcebin_js", "npm:0.0.3-ignore"],
             ["spotify-web-api-node", "npm:5.0.2"],
@@ -3490,6 +3505,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["twemoji", "npm:13.0.1"],
             ["twemoji-parser", "npm:13.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
+            ["weather-js", "npm:2.0.0"],
             ["ytdl-core", "npm:4.4.5"]
           ],
           "linkType": "SOFT",
@@ -5854,6 +5870,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["relevant-urban", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/relevant-urban-npm-2.0.0-fcf75be127-72645cd1e9.zip/node_modules/relevant-urban/",
+          "packageDependencies": [
+            ["relevant-urban", "npm:2.0.0"],
+            ["snekfetch", "npm:3.6.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["repeating", [
         ["npm:2.0.1", {
           "packageLocation": "./.yarn/cache/repeating-npm-2.0.1-b05693cc77-a788561778.zip/node_modules/repeating/",
@@ -6185,6 +6211,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ansi-styles", "npm:4.3.0"],
             ["astral-regex", "npm:2.0.0"],
             ["is-fullwidth-code-point", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["snekfetch", [
+        ["npm:3.6.4", {
+          "packageLocation": "./.yarn/cache/snekfetch-npm-3.6.4-32cb44e1f0-146f7e2166.zip/node_modules/snekfetch/",
+          "packageDependencies": [
+            ["snekfetch", "npm:3.6.4"]
           ],
           "linkType": "HARD",
         }]
@@ -7009,6 +7044,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["assert-plus", "npm:1.0.0"],
             ["core-util-is", "npm:1.0.2"],
             ["extsprintf", "npm:1.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["weather-js", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/weather-js-npm-2.0.0-5ecd18393b-e146c29484.zip/node_modules/weather-js/",
+          "packageDependencies": [
+            ["weather-js", "npm:2.0.0"],
+            ["request", "npm:2.88.2"],
+            ["xml2js", "npm:0.4.23"]
           ],
           "linkType": "HARD",
         }]
